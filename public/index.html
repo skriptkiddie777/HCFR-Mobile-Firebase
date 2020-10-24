@@ -2,116 +2,123 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
-  <title>HCFR Mobile Welcome</title>
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <link rel="stylesheet" type="text/css" href="styles/framework.css">
-  <link rel="stylesheet" type="text/css" href="css/bubble.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
-  <link rel="manifest" href="_manifest.json" data-pwa-version="set_by_pwa.js">
-  <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/_service-worker.js')
-    }
-  </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>HCFR Mobile Welcome</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="styles/framework.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+	    <link href="css/bubble.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap">
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_by_pwa.js">
+    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/_service-worker.js')
+        }
+    </script>
+	<script>document.addEventListener('touchstart', onTouchStart, {passive: true});</script>
+    <!-- PushAlert -->
+    <script type="text/javascript" async>
+        (function(d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.src = "https://cdn.pushalert.co/integrate_001ff3fff0feb55e33d81492b0693777.js";
+            s.parentNode.insertBefore(g, s);
+        }(document, "script"));
+    </script>
+    <!-- End PushAlert -->
 </head>
 
 
 <body class="theme-dark" data-gradient="gradient-1">
 
-  <div id="page">
+    <div id="page">
 
-    <div id="page-preloader">
-      <div class="loader-main">
-        <div class="preload-spinner"></div>
-      </div>
-    </div>
-
-    <div class="header header-transparent header-fixed header-logo-app">
-      <a href="#" class="back-button header-title color-white"></a>
-      <a href="#" class="header-icon header-icon-1 color-white back-button"><i class="fas fa-arrow-left"></i></a>
-    </div>
-
-    <div class="page-bg">
-      <div></div>
-    </div>
-    <div class="page-content">
-
-      <div data-height="cover-header" class="caption bottom-0">
-        <div class="caption-bottom center-text">
-          <h2 class="color-white font-40 center-text bottom-10 font-900 uppercase">
-            Welcome
-          </h2>
-          <p class="color-white boxed-text-large opacity-50 bottom-10 font-14">
-            We are already the best fire department <br>
-            mind as well have the best mobile app too!
-          </p>
-          <a href="login.html" class="bubbly-button bottom-40 button-round left-10">Log In</a>
-          <a href="pages/sign-up.html" class="bubbly-button bottom-10 left-30">Sign Up</a>
-
-          <img width="371" src="images/walk2_cut.png">
+        <div id="page-preloader">
+            <div class="loader-main">
+                <div class="preload-spinner"></div>
+            </div>
         </div>
-      </div>
-      <div class="caption-overlay bg-black opacity-80"></div>
-      <div class="caption-bg" style="background-image:url(images/bg1.jpg);"></div>
 
-
-    </div>
-
-    <div id="action-login" class="menu-box menu-box-detached round-medium" data-menu-type="menu-box-modal" data-menu-height="100%" data-menu-width="100%" data-menu-effect="menu-over">
-
-      <div data-height="cover-header" class="caption">
-        <div class="caption-center left-20 right-20">
-          <div class="content content-box content-box-full-top content-box-full-bottom round-large shadow-huge ">
-            <img src="images/pictures/9w.jpg" class="responsive-image-full shadow-huge bottom-20">
-            <img src="images/pictures/0s.png" class="input-image round-medium shadow-huge" alt="img">
-            <h1>Login</h1>
-            <p class="under-heading font-10 color-theme opacity-70 bottom-10">Hello stranger, let's get you into your account.</p>
-            <div class="input-style has-icon input-style-1 input-required">
-              <i class="input-icon fa fa-user"></i>
-              <span>Name</span>
-              <em>(required)</em>
-              <input type="name" placeholder="Name">
-            </div>
-            <div class="input-style has-icon input-style-1 input-required">
-              <i class="input-icon fa fa-lock"></i>
-              <span>Password</span>
-              <em>(required)</em>
-              <input type="name" placeholder="Password">
-            </div>
-            <div class="one-half top-20">
-              <a href="#" class="color-gray-light text-left font-10">Forgot Password</a>
-            </div>
-            <div class="one-half top-20 last-column">
-              <a href="#" class="color-gray-light text-right font-10">Create Account</a>
-            </div>
-            <div class="clear"></div>
-            <a class="back-button button button-m round-huge shadow-huge button-full bg-green1-dark top-30 bottom-25" href="#">Login</a>
-          </div>
+        <div class="header header-transparent header-fixed header-logo-app">
+            <a href="#" class="back-button header-title color-white"></a>
+            <a href="#" class="header-icon header-icon-1 color-white back-button"><i class="fas fa-arrow-left"></i></a>
         </div>
-        <div class="caption-overlay bg-black opacity-80"></div>
-        <div class="caption-bg" style="background-image:url(images/pictures/18t.jpg)"></div>
-      </div>
 
+        <div class="page-bg">
+            <div></div>
+        </div>
+        <div class="page-content">
+
+            <div data-height="cover-header" class="caption bottom-0">
+                <div class="caption-bottom center-text">
+                    <h2 class="color-white font-40 center-text bottom-10 font-900 uppercase">
+                        Welcome
+                    </h2>
+                    <p class="color-white boxed-text-large opacity-50 bottom-10 font-14">
+                        We are already the best fire department <br> mind as well have the best mobile app too!
+                    </p>
+                    <a href="login.html" class="bubbly-button bottom-20 button-round left-10">Log In</a>
+                    <a href="pages/sign-up.html" class="bubbly-button bottom-10 left-30">Sign Up</a>
+
+                    <img width="371" src="images/walk2_cut.png">
+                </div>
+            </div>
+            <div class="caption-overlay bg-black opacity-80"></div>
+            <div class="caption-bg" style="background-image:url(images/bg1.jpg);"></div>
+
+
+        </div>
+
+        <div id="action-login" class="menu-box menu-box-detached round-medium" data-menu-type="menu-box-modal" data-menu-height="100%" data-menu-width="100%" data-menu-effect="menu-over">
+
+            <div data-height="cover-header" class="caption">
+                <div class="caption-center left-20 right-20">
+                    <div class="content content-box content-box-full-top content-box-full-bottom round-large shadow-huge ">
+                        <img src="images/pictures/9w.jpg" class="responsive-image-full shadow-huge bottom-20">
+                        <img src="images/pictures/0s.png" class="input-image round-medium shadow-huge" alt="img">
+                        <h1>Login</h1>
+                        <p class="under-heading font-10 color-theme opacity-70 bottom-10">Hello stranger, let's get you into your account.</p>
+                        <div class="input-style has-icon input-style-1 input-required">
+                            <i class="input-icon fa fa-user"></i>
+                            <span>Name</span>
+                            <em>(required)</em>
+                            <input type="name" placeholder="Name">
+                        </div>
+                        <div class="input-style has-icon input-style-1 input-required">
+                            <i class="input-icon fa fa-lock"></i>
+                            <span>Password</span>
+                            <em>(required)</em>
+                            <input type="name" placeholder="Password">
+                        </div>
+                        <div class="one-half top-20">
+                            <a href="#" class="color-gray-light text-left font-10">Forgot Password</a>
+                        </div>
+                        <div class="one-half top-20 last-column">
+                            <a href="#" class="color-gray-light text-right font-10">Create Account</a>
+                        </div>
+                        <div class="clear"></div>
+                        <a class="back-button button button-m round-huge shadow-huge button-full bg-green1-dark top-30 bottom-25" href="#">Login</a>
+                    </div>
+                </div>
+                <div class="caption-overlay bg-black opacity-80"></div>
+                <div class="caption-bg" style="background-image:url(images/pictures/18t.jpg)"></div>
+            </div>
+
+        </div>
+
+
+
+        <div class="menu-hider"></div>
     </div>
 
-
-
-    <div class="menu-hider"></div>
-  </div>
-
-  <script type="text/javascript" src="scripts/jquery.js"></script>
-  <script type="text/javascript" src="scripts/plugins.js"></script>
-  <script type="text/javascript" src="scripts/bubbly.js"></script>
-  <script type="text/javascript" src="scripts/custom.js" async></script>
-  <script src="js/sweetalert2.all.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/plugins.js" defer></script>
+    <script type="text/javascript" src="scripts/bubbly.js" defer></script>
+    <script type="text/javascript" src="scripts/custom.js" defer></script>
 
 </body>
 
