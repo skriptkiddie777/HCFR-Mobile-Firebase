@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NightOwl 1.2 Example</title>
+
+	<!-- DEMO-ONLY STYLES -->
+	<style>
+    	.main {width:80%</h5>; margin:0 auto; margin-top:50px; }
+		h2 {font-family:'Arial'; color:#333; opacity:0.4; font-size:16px; font-weight:normal; text-align:center;}
+		input.velocity_field {margin-left:90px; width:250px;}
+    </style>
+    
+    <!-- LOAD NightOwl CSS -->
+	<link rel="stylesheet" type="text/css" media="screen" href="NightOwl/css/jquery-nightowl-1.2.css"/>        
+		
+	<!-- LOAD JQUERY -->
+	<script src="NightOwl/js/jquery-1.11.1.min.js"></script>		
+	<!-- LOAD NightOwl 1.2 -->
+	<script type="text/javascript" src="NightOwl/js/jquery-nightowl-1.2.js"></script>
+        
+    <script type="text/javascript">
+		$(window).load(function(){
+			$('div.night_owl_calc').NightOwl({ "drag" : "false" });
+			$('div.no_mini').NightOwl();
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div class="main">
+        <div class="night_owl_calc"></div
+	</div>
+</body>
+</html>

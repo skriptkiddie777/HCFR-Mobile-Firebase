@@ -1,0 +1,60 @@
+    <!--Menu Pediatric Drug Calculator-->
+    <div id="menu-pedi-calc">
+			<div class="title-pedi top-10 center-text">
+    			<h3 class="font-900 top-20 bottom-10" style="color: #F7039A">Pediatric Calculator</h3>
+			</div>
+            	<p class="under-heading bottom-10 font-16 olive center-text">Start By Entering The Patient's Weight. Touch the weight field to clear results</p>
+            <div class="deco-thin deco-2 bottom-10"></div>
+			<div class="drug_calc content-box">
+					<div class="error-section" id="warning-message"></div>
+ 					<div class="error-section" id="error-message"></div>
+ 					<form action="" id="drugform" class="contactForm" id="contactForm" onsubmit="return false;">
+					<fieldset>
+						<div class="top-10 formFieldWrap">
+							<div class="opacity-70 left-text top-20 lime bottom-10">Weight in KG</div>
+						<label class="field-title contactNameField" for="contactNameField"></label>
+							<input type="number" placeholder="Weight (KG)" value="" id="theweight" min="1" max="100" onclick="clearResults()" onselect="clearResults()" />
+						</div>
+						<div class="form-field top-10">
+							<label class="field-title contactNameField" for="contactNameField"></label>
+							<div>
+ 								<select id="drug" name='drug' onchange="calculateTotalMls(); calculateMgsTotal()">
+									<option value="None">Select Drug</option>
+									<option value="Adenosine1">Adenosine 6mg/3mL (0.1mg/kg)</option>
+									<option value="Adenosine2">Adenosine 6mg/3mL (0.2mg/kg)</option>
+									<option value="Amiodarone">Amiodarone 300mg/3ml (5mg/kg)</option>
+									<option value="Atropine">Atropine 1mg/10mL (0.02mg/kg</option>
+									<option value="Dextrose10">Dextrose 10% 12.5mg/50mL (0.25mg/kg)</option>
+									<option value="Dextrose25">Dextrose 25% 12.5mg/50mL (1.0mg/kg)</option>
+									<option value="Diphenhydramine-anaphylaxis">Diphenhydramine: Anaphylaxis 50mg/1mL (1.0mg/kg)</option>
+									<option value="Diphenhydramine-dystonia">Diphenhydramine: Dystonia 50mg/1mL (0.5mg/kg)</option>
+									<option value="Epinephrine1000">Epinephrine 1:1000 1mg/mL (0.01mg/kg)</option>
+									<option value="Epinephrine10000">Epinephrine 1:10,000 1mg/10mL (0.01mg/kg)</option>
+									<option value="Fentanyl">Fentanyl 250mcg/5mL (1mcg/kg)</option>
+									<option value="Lidocaine">Lidocaine 100/5mL (1mg/kg)</option>
+									<option value="Magnesium">Magnesium Sulfate 5gm/10mL (40mg/kg)</option>
+									<option value="Methylprednisolone">Methylprednisolone 125mg/2mL (1mg/kg)</option>
+									<option value="Midazolam">Midazolam 10mg/2mL (0.2mg/kg)</option>
+									<option value="Morphine">Morphine Sulfate 10mg/10mL (0.1mg/kg)</option>
+									<option value="Naloxone">Naloxone 2mg/2mL (0.1mg/kg)</option>
+									<option value="Ondansetron">Ondansetron 4mg/2mL (0.1mg/kg)</option>
+								</select>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="formTextareaWrap half-bottom">
+							<div class="formFieldWrap">
+							<label class="field-title contactNameField" for="contactNameField"></label>
+							<div class="opacity-70 left-text top-20 lime bottom-10">Dose in mLs</div>
+							<div class="result-mls-section__item result-mgs-section__result" id="Result"></div>
+							</div>
+						  <div class="formFieldWrap">
+						  	<div class="bottom-10 opacity-70 left-text top-20 lime">Dose in mgs</div>
+								<div class="result-mls-section__item result-mgs-section__result" id="ResultMgs"></div>
+						  </div>
+            				<a href="#" class="button button-full button-m button-round-medium shadow-huge bg-purple close-menu">Awesome</a>    
+					   </div>
+					</fieldset>
+				</form>
+        </div>
+    </div>

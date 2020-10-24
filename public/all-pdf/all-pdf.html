@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/flipbook.css" />
+    <script src="js/old-browser-checker.js"></script>
+    <script src="js/modernizr.custom.min.js"></script>
+  </head>
+  <body style="overflow: hidden">
+    <header>
+      <div class="title sample">Flipbook sample</div>
+    </header>
+    <aside>
+      <h1>Controls</h1>
+      <h2>Navigate:</h2>
+      <button id="previous">Previous page</button>
+      <button id="next">Next page</button>
+      <hr />
+      <h1>Instructions</h1>
+      <p>
+        Use the buttons to navigate between pages. You can also click and drag the corners of the pages.
+      </p>
+    </aside>
+    <div id="flipbook">
+      <div id="loading-message"></div>
+    </div>
+    <script src="js/menu-button.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/lib/core/CoreControls.js"></script>
+    <script src="js/turn.min.js"></script>
+
+    
+
+    <script>
+      Modernizr.addTest('async', function() {
+        try {
+          var result;
+          eval('let a = () => {result = "success"}; let b = async () => {await a()}; b()');
+          return result === 'success';
+        } catch (e) {
+          return false;
+        }
+      });
+
+      // test for async and fall back to code compiled to ES5 if they are not supported
+      ['flipbook.js'].forEach(function(js) {
+        var script = Modernizr.async ? js : js.replace('.js', '.ES5.js');
+        var scriptTag = document.createElement('script');
+        scriptTag.src = script;
+        scriptTag.type = 'text/javascript';
+        document.getElementsByTagName('head')[0].appendChild(scriptTag);
+      });
+    </script>
+	  
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.24.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.24.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.24.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.24.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.24.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.24.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/7.24.0/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/7.24.0/firebase-performance.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </body>
+</html>

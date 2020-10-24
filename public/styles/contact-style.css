@@ -1,0 +1,76 @@
+.card-style .card-overlay {
+  border-radius: 15px;
+}
+
+.card-body {
+  z-index: 2;
+}
+
+.card-header {
+  z-index: 2;
+}
+
+.card-footer {
+  z-index: 2;
+}
+
+.card-top {
+  z-index: 2;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+}
+
+.card-bottom {
+  z-index: 2;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.card-center {
+  z-index: 2;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card-overlay {
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  position: absolute;
+  z-index: 1;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  min-height: 250px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.card-image img {
+  transition: all 450ms ease;
+}
+
+.card-overflow {
+  overflow: visible !important;
+  z-index: 20;
+}
+
+[data-card-height] p {
+  padding-bottom: 0px;
+}
+
+/*Card Effects*/
+.card-scale-image {
+  transform: scale(1.05, 1.05) !important;
+}

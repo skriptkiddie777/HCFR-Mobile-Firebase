@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>Kolor Mobile</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">  
+<!-- Don't forget to update PWA version (must be same) in pwa.js & manifest.json -->
+<link rel="manifest" href="_manifest.json" data-pwa-version="set_by_pwa.js">
+<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+</head>
+    
+<body class="theme-light" data-gradient="gradient-1">
+        
+<div id="page">
+    
+    <div id="page-preloader">
+        <div class="loader-main"><div class="preload-spinner"></div></div>
+    </div>
+    
+	<div class="header header-fixed header-logo-app">
+        <a href="#" class="back-button header-logo"></a>
+		<a href="#" class="header-icon header-icon-1" data-menu="menu-navigation"><i class="fas fa-bars"></i></a>
+		<a href="#" class="header-icon header-icon-2" data-menu="menu-updates"><i class="fas fa-bell"></i></a>
+		<a href="#" class="header-icon header-icon-3" data-menu="menu-settings"><i class="fas fa-cog fa-spin font-13"></i></a>
+		<a href="#" class="header-icon header-icon-4" data-toggle-theme><i class="fas fa-moon"></i></a>
+	</div>
+    
+    <div class="footer-menu footer-5-icons shadow-huge shadow-huge">
+        <a href="pages-classic-list.html"><i class="fa fa-heart"></i><span>Pages</span></a>
+        <a href="components.html"><i class="fa fa-gift"></i><span>Features</span></a>
+        <a href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="media.html"><i class="fa fa-image"></i><span>Media</span></a>
+        <a href="page-contact.html" class="active-nav"><i class="fa fa-envelope"></i><span>Contact</span></a>
+        <div class="clear"></div>
+    </div>
+
+                  
+    <div class="page-bg"><div></div></div>
+    <div class="page-content header-clear-large">     
+        
+
+        <div class="responsive-iframe left-20 right-20 round-medium shadow-huge bottom-30">
+            <iframe src='https://maps.google.com/?ie=UTF8&amp;ll=47.595131,-122.330414&amp;spn=0.006186,0.016512&amp;t=h&amp;z=17&amp;output=embed' frameborder='0' allowfullscreen></iframe>
+        </div>
+        <div class="content content-box content-box-full-bottom round-medium shadow-huge">
+            
+            <h1 class="center-text">Get In Touch</h1>
+            <div class="divider-icon bg-highlight left-50 right-50 top-20 bottom-20"><i class="fa font-18 color-blue2-dark fa-envelope"></i></div>
+            <p class="boxed-text-large">
+                A fully working PHP/AJAX contact form made to be as easy as possible to use.
+            </p>
+            <div class="contact-form">
+                <div class="formSuccessMessageWrap disabled" id="formSuccessMessageWrap">
+                    <div class="bg-green1-dark round-medium shaow-huge">
+                        <h1 class="color-white center-text top-30"><i class="fa fa-check-circle fa-3x shadow-small round-image"></i></h1>
+                        <h2 class="color-white bold center-text top-20">Message Sent</h2>
+                        <p class="color-white under-heading boxed-text-large bottom-30">We'll get back to you shortly.</p>
+                    </div>
+                </div>
+                <form action="php/contact.php" method="post" class="contactForm" id="contactForm">
+                    <fieldset>
+                        <div class="formValidationError disabled round-huge top-30 bg-red2-dark" id="contactNameFieldError">
+                            <span class="center-text uppercase color-white ultrabold">Name is required!</span>
+                        </div>
+                        <div class="formValidationError disabled round-huge top-30 bg-red2-dark" id="contactEmailFieldError">
+                            <span class="center-text uppercase color-white ultrabold">Mail address required!</span>
+                        </div>
+                        <div class="formValidationError disabled round-huge top-30 bg-red2-dark" id="contactEmailFieldError2">
+                            <span class="center-text uppercase color-white ultrabold">Mail address must be valid!</span>
+                        </div>
+                        <div class="formValidationError disabled round-huge top-30 bg-red2-dark" id="contactMessageTextareaError">
+                            <span class="center-text uppercase color-white ultrabold">Message field is empty!</span>
+                        </div>
+                        <div class="form-field form-name">
+                            <label class="contactNameField color-theme" for="contactNameField">Name:<span>(required)</span></label>
+                            <input type="text" name="contactNameField" value="" class="round-small contactField requiredField" id="contactNameField" />
+                        </div>
+                        <div class="form-field form-email">
+                            <label class="contactEmailField color-theme" for="contactEmailField">Email: <span>(required)</span></label>
+                            <input type="text" name="contactEmailField" value="" class="round-small contactField requiredField requiredEmailField" id="contactEmailField" />
+                        </div>
+                        <div class="form-field form-text">
+                            <label class="contactMessageTextarea color-theme" for="contactMessageTextarea">Message: <span>(required)</span></label>
+                            <textarea name="contactMessageTextarea" class="round-small contactTextarea requiredField" id="contactMessageTextarea"></textarea>
+                        </div>
+                        <div class="form-button">
+                            <input type="submit" class="button bg-green1-dark button-m button-full round-medium shadow-huge bottom-10 contactSubmitButton" value="Send Message" data-formId="contactForm" />
+                        </div>
+                    </fieldset>
+                </form>			
+            </div>
+        </div>
+
+        <div class="content content-box round-medium shadow-huge bottom-0">
+            <div class="content-title has-icon">
+                <h3>Contact Info</h3>
+                <span class="color-blue2-dark">Get in Touch with Us</span>
+                <i class="fa fa-map-marker bg-green1-dark shadow-large"></i>
+            </div>
+            <div class="divider bottom-0 top-30"></div>            
+            <div class="contact-information last-column">
+                <div class="container">
+                    <p class="contact-information">
+                        <br> PO Box 22161 Street Collins East
+                        <br> PO Box 16122 Collins Street West
+                        <br> Victoria 8007 Australia
+                    </p>
+                    <div class="divider"></div>
+                    <p class="contact-information">
+                        <strong class="color-theme font-16">Envato Headquarters</strong>
+                        <br> 121 King Street, Melbourne
+                        <br> Victoria 3000 Australia
+                    </p>
+                    <div class="divider bottom-0"></div>
+                    <div class="link-list link-list-1">
+                        <a href="tel:+1 234 567 8900">
+                            <i class="fa fa-phone color-green1-dark"></i>
+                            <span>+1 234 567 8900</span>
+                            <em class="bg-highlight">TAP TO CALL</em>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <a href="mailto:mail@domain.com">
+                            <i class="fa fa-envelope color-blue2-dark"></i>
+                            <span>mail@domain.com</span>
+                            <em class="bg-highlight">TAP TO MAIL</em>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-facebook color-facebook"></i>
+                            <span>enabled.labs</span>
+                            <i class="fa fa-link"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter color-twitter"></i>
+                            <span>@iEnabled</span>
+                            <i class="fa fa-link"></i>
+                        </a>    
+                        <a href="#" class="no-border">
+                            <i class="fab fa-linkedin color-linkedin"></i>
+                            <span>@Enabled</span>
+                            <i class="fa fa-link"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider divider-margins"></div>                
+        
+        <div class="footer" data-footer-load="menu-footer.html"></div>
+         
+        
+    </div>      
+
+    <div id="menu-navigation"
+         class="menu-box menu-box-gradient menu-transparent"
+         data-menu-type="menu-box-left"
+         data-menu-width="260"
+         data-menu-active="nav-galleries"
+         data-menu-load="menu-navigation.html"
+         data-menu-effect="menu-parallax">
+    </div>  
+
+    
+    <div id="menu-share"
+         class="menu-box menu-box-detached round-medium"
+         data-menu-type="menu-box-bottom"
+         data-menu-height="390"
+         data-menu-load="menu-share.html"
+         data-menu-effect="menu-over">
+    </div>   
+    
+    <div id="menu-settings"
+         class="menu-box menu-box-gradient"
+         data-menu-type="menu-box-modal"
+         data-menu-height="100%"
+         data-menu-width="100%"
+         data-menu-load="menu-settings.html"
+         data-menu-effect="menu-over">
+    </div>  
+        
+        
+    <div class="menu-hider"></div>
+</div>
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js" async></script>
+</body>
+
+    

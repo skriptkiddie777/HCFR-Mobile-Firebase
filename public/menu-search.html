@@ -1,0 +1,89 @@
+<div class="content bottom-0">
+    <h3 class="font-900 top-20 bottom-0">Search</h3>
+    <p class="under-heading color-blue2-dark bottom-10 font-11">Search any word...ANY!</p>
+    <a href="#" class="close-menu close-menu-icon"><i class="fa fa-times-circle color-red2-dark"></i></a>
+</div>
+<div class="divider divider-margins"></div>
+<div class="content top-20">
+            <form autocomplete="false" class="search-box search-color content round-medium shadow-huge bottom-20">
+                <input type="search" id="searchBox" placeholder="What are you looking for?">
+                <i class="fa fa-times disabled color-red2-dark"></i>
+            </form> 
+	
+</div>
+
+<script type="text/javascript">
+window.ss360Config = {
+    tracking: {
+        providers: [
+            "GA",
+            "GTM"
+        ]
+    },
+    dataPoints: {
+        exclude: [],
+        single: []
+    },
+    siteId: "hcfrmobile.com",
+    style: {
+        themeColor: "#1C2077",
+        accentColor: "#2FB6EC",
+        searchBox: {
+            text: {
+                size: "12px",
+                color: "#333333"
+            },
+            button: {
+                text: " ",
+                icon: "magnifier",
+                color: "#666666",
+                iconPadding: "8px"
+            },
+            background: {
+                color: "#ffffff"
+            },
+            border: {
+                color: "#dddddd",
+                radius: "0px"
+            },
+            padding: "8px",
+            icon: {
+                image: "magnifier",
+                color: "#666666"
+            }
+        }
+    },
+    results: {
+        redirectOnSingle: true,
+        infiniteScroll: true,
+        embedConfig: {
+            contentBlock: "#ss360-target"
+        }
+    },
+    voiceSearch: {
+        enabled: true
+    },
+    suggestions: {
+        showImages: false,
+        viewAllLabel: "Show All"
+    },
+    layout: {
+        desktop: {
+            type: "masonry"
+        }
+    },
+    filters: {
+        enabled: true
+    },
+    searchBox: {
+        placeholder: "search any word..",
+        searchButton: "#searchButton"
+    },
+    showErrors: false
+};
+
+var e=document.createElement("script");
+e.async=!0;
+e.src="https://cdn.sitesearch360.com/v13/sitesearch360-v13.min.js";
+document.getElementsByTagName("body")[0].appendChild(e);
+</script>

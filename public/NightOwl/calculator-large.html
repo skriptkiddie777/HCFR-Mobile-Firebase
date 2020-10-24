@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NightOwl 1.2 Example</title>
+
+	<!-- DEMO-ONLY STYLES -->
+	<style>
+    	.main {width:450px; margin:0 auto; margin-top:50px; }
+		h2 {font-family:'Arial'; color:#333; opacity:0.4; font-size:16px; font-weight:normal; text-align:center;}
+		input.velocity_field {margin-left:90px; width:250px;}
+    </style>
+    
+    <!-- LOAD NightOwl CSS -->
+	<link rel="stylesheet" type="text/css" media="screen" href="NightOwl/css/jquery-nightowl-1.2.css"/>        
+		
+	<!-- LOAD JQUERY -->
+	<script src="NightOwl/js/jquery-1.11.1.min.js"></script>		
+	<!-- LOAD NightOwl 1.2 -->
+	<script type="text/javascript" src="NightOwl/js/jquery-nightowl-1.2.js"></script>
+        
+    <script type="text/javascript">
+		$(window).load(function(){
+			$('div.night_owl_calc').NightOwl({ "drag" : "false" });
+			$('div.no_mini').NightOwl();
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div class="main">
+    	<h2>Standard Calculator Example</h2>
+    	<!-- STANDARD CALCULATOR -->
+        <div class="night_owl_calc"></div>
+    
+    
+
+		<h2>Mini-Calculator Example</h2>
+		<!-- BUILD A MINI CALCULATOR FOR VELOCITY AND ASSIGN IT TO THIS FIELD -->
+		<input type="text" value="0" class="velocity_field">
+		<div class="no_mini" data-nightowl='{
+			"type":"mini", 
+	    	"equation":"velocity", 
+			"assign_field":"velocity_field",
+    	    "match_pos":"right_down",
+			"offset":"-3,0",
+			"pos_mode" :"absolute"
+    	 }'></div>
+
+	</div>
+</body>
+</html>

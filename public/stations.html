@@ -1,0 +1,1308 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>HCFR Fire Stations</title>
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.css">
+<link rel="stylesheet" type="text/css" href="fonts/css/all.css">
+<link rel="stylesheet" type="text/css" href="fonts/css/solid.min.css">
+<link rel="stylesheet" type="text/css" href="fonts/css/font-awesome-animation.min.css">
+<link rel="stylesheet" type="text/css" href="fonts/css/light.min.css">
+<link rel="stylesheet" type="text/css" href="fonts/css/duotone.css">
+<link rel="stylesheet" type="text/css" href="fonts/css/regular.css">
+<link rel="stylesheet" type="text/css" href="styles/colors.css">
+<link rel="stylesheet" type="text/css" href="styles/calendar.css">
+<link rel="stylesheet" type="text/css" href="styles/calc-style.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" href="assets/css/calendar.css">
+<link rel="stylesheet" href="assets/css/calendar_full.css">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">  
+<!-- Don't forget to update PWA version (must be same) in pwa.js & manifest.json -->
+<link rel="manifest" href="_manifest.json" data-pwa-version="set_by_pwa.js">
+<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+</head>
+    
+<body class="theme-dark" data-gradient="gradient-1">
+
+	<div id="page">    
+	
+	<div id="page-preloader">
+		
+        <div class="loader-main">
+			<div class="preload-spinner"></div></div>
+	</div>
+    
+	<div class="header header-fixed header-logo-app">
+		<a href="home.html" class="header-logo"></a>
+        <a href="#" class="header-icon header-icon-1" data-menu="menu-navigation"><i class="fad fa-bars animated faa-wrench lime"></i></a>
+		<a href="#" class="header-icon header-icon-2" data-menu="menu-calendar-duty"><i class="animated faa-ring yellow fad fa-calendar-day"></i></a>
+		<a href="#" class="header-icon header-icon-3" data-menu="menu-search"><i class="fad fa-search animated olive faa-pulse"></i></a>
+		<a href="#" class="header-icon header-icon-4" data-menu="menu-settings"><i class="fad fa-cog fa-spin font-13 teal"></i></a>
+		<a href="#" class="header-icon header-icon-5" data-toggle-theme><i class="fad fa-moon animated faa-shake fuchsia"></i></a>
+		<a href="#" class="header-icon header-icon-6" data-menu="menu-contact"><i class="fad fa-envelope-open animated faa-tada orange"></i></a>
+	    <a href="#" class="header-icon header-icon-6" data-menu="menu-contact"><i class="fad fa-envelope-open animated faa-tada orange"></i></a>
+	</div>    
+                  
+    <div class="page-bg"></div>
+    <div class="page-content header-clear-large">
+        
+        <div data-height="250" class="caption round-medium shadow-huge caption-margins">
+			<a href="#" data-menu="action-gps">
+            <div class="caption-full caption-top">
+                <p class="caption-badge color-white font-700 uppercase font-11 shadow-huge text-shadow-medium gradient-red-light">Click For Your GPS Location!</p>
+				</div></a>
+            <div class="caption-bottom center-text bottom-40">
+                <h1 class="font-24 font-700 color-white">HCFR Station List</h1>
+                <span class="under-heading color-white font-12 opacity-80">Pick Your Favorite Station.</span>
+            </div>
+            <div class="caption-overlay bg-gradient-fade"></div>
+            <div class="caption-bg bg-31"></div>
+        </div>   
+		
+        <a class="button button-m caption-under-button round-huge shadow-huge button-center-large gradient-magenta-dark" href="https://firebasestorage.googleapis.com/v0/b/hcfr-pocket-guide-app.appspot.com/o/References%2FHCFR-Station-Phone-Addresses.pdf?alt=media&token=a05e0e8c-d049-4db9-9f8e-0223f50d12f4">DOWNLOAD STATION LIST</a>
+		
+    		<link rel="stylesheet" type="text/css" href="styles/framework-news.css">
+		
+        <div data-accordion="accordion-content-10" data-height="90" class="caption caption-margins round-small bottom-5 top-20">
+            <div class="caption-center">
+                <h4 class="color-white center-text bottom-0 uppercase bolder">Hillsborough County Fire Stations</h4>
+                <p class="color-white center-text bottom-0 opacity-50">All Stations - Touch To Open or See Battalions Below. Bouncing icon indicates a Chief Station!</p>
+            </div>
+            <div class="caption-overlay bg-black opacity-80"></div>
+            <div class="caption-background bg-31"></div>
+        </div> 
+        <div id="accordion-content-10" class="accordion-content content content-box round-medium shadow-huge top-15">
+            <div class="link-list link-list-3">
+                <a href="stations/station-1.html" class="round-small shadow-tiny">
+                    <i class="fad fa-mobile purple"></i>
+                    <span>Station 1</span>
+                    <strong>Progress Village</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fad fa-check-circle purple"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-2.html" class="round-small shadow-tiny">
+                    <i class="fad fa-mobile green"></i>
+                    <span>Station 2</span>
+                    <strong>Lithia</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-3.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 3</span>
+                    <strong>Summerfield</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+            </div> 
+            <div class="link-list link-list-3">
+                <a href="stations/station-4.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 4</span>
+                    <strong>Armwood</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-5.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Station 5</span>
+                    <strong>University (Battalion 2)</strong>
+                    <em class="teal"></em>
+                    <i class="fa fa-check-circle teal animated faa-bounce"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-6.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 6</span>
+                    <strong>Henderson</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-7.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile red"></i>
+                    <span>Station 7</span>
+                    <strong>South Brandon</strong>
+                    <em class="red">Bat 1</em>
+                    <i class="fa fa-check-circle red"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-8.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Station 8</span>
+                    <strong>Sundance</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-9.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Station 9</span>
+                    <strong>Sabal Park</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-10.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 10</span>
+                    <strong>Armdale</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-11.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile red"></i>
+                    <span>Station 11</span>
+                    <strong>Brandon</strong>
+                    <em class="red">Bat 1</em>
+                    <i class="fa fa-check-circle red"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-12.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 12</span>
+                    <strong>Gibsonton</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-13.html"  class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 13</span>
+                    <strong>Gunn Highway</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-14.html"  class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Station 14</span>
+                    <strong>North Hillsborough</strong>
+                    <em class="teal">Bat 2</em>
+                    <i class="fa fa-check-circle teal"></i>
+                </a>
+            </div> 
+            <div class="link-list link-list-3">
+                <a href="stations/station-15.html"  class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Station 15</span>
+                    <strong>Palm River</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+            <div class="link-list link-list-3">
+                <a href="stations/station-16.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 16</span>
+                    <strong>Riverview (Battalion 8)</strong>
+                    <em class="green"></em>
+                    <i class="fa fa-check-circle green animated faa-bounce"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-17.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Station 17</span>
+                    <strong>Ruskin</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-18.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile red"></i>
+                    <span>Station 18</span>
+                    <strong>Seffner-N. Brandon (Battalion 1)</strong>
+                    <em class=""></em>
+                    <i class="fa fa-check-circle red animated faa-bounce"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-19.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 19</span>
+                    <strong>Carrollwood</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-20.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 20</span>
+                    <strong>West Hillsborough I (Battalion 5)</strong>
+                    <em class="olive"></em>
+                    <i class="fa fa-check-circle olive animated faa-bounce"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-21.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 21</span>
+                    <strong>Thonotosassa</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-22.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Station 22</span>
+                    <strong>Wimauma</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-23.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 23</span>
+                    <strong>Dover (Battallion 6)</strong>
+                    <em class="orange"></em>
+                    <i class="fa fa-check-circle orange animated faa-bounce"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-24.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 24</span>
+                    <strong>Lutz</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-25.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 25</span>
+                    <strong>Springhead</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-26.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 26</span>
+                    <strong>Cork-Knights</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-27.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 27</span>
+                    <strong>Bloomingdale</strong>
+                    <em class="green">Bat 1</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-28.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Station 28</span>
+                    <strong>Sun City/Ed</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-29.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Station 29</span>
+                    <strong>Apollo Beach</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-30.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 30</span>
+                    <strong>Midway</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-31.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 31</span>
+                    <strong>West Hillsborough II</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-32.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Station 32</span>
+                    <strong>East Lake (Battalion 3)</strong>
+                    <em class="purple"></em>
+                    <i class="fa fa-check-circle purple animated faa-bounce"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-33.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Station 33</span>
+                    <strong>Falkenburg</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-34.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 34</span>
+                    <strong>Van Dyke</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-35.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 35</span>
+                    <strong>Westchase</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-36.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile red"></i>
+                    <span>Station 36</span>
+                    <strong>Valrico</strong>
+                    <em class="red">Bat 1</em>
+                    <i class="fa fa-check-circle red"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-37.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Station 37</span>
+                    <strong>Providence Road</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-38.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 38</span>
+                    <strong>River Oaks</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-39.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 39</span>
+                    <strong>Tampa Shores</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-40.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Station 40</span>
+                    <strong>Chapman</strong>
+                    <em class="teal">Bat 2</em>
+                    <i class="fa fa-check-circle teal"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-41.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 41</span>
+                    <strong>Northdale (Battalion 7)</strong>
+                    <em class="maroon"></em>
+                    <i class="fa fa-check-circle maroon animated faa-bounce"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-42.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 42</span>
+                    <strong>Country Place</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+            </div>  
+            <div class="link-list link-list-3">
+                <a href="stations/station-43.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Station 43</span>
+                    <strong>Advent Health-TPA</strong>
+                    <em class="teal">Bat 2</em>
+                    <i class="fa fa-check-circle teal"></i>
+                </a>
+            </div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-44.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 44</span>
+                    <strong>Fishhawk</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+                <a href="stations/station-45.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile red"></i>
+                    <span>Station 45</span>
+                    <strong>Central Brandon</strong>
+                    <em class="red">Bat 1</em>
+                    <i class="fa fa-check-circle red animated faa-bounce"></i>
+                </a>
+                <a href="stations/station-46.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 46</span>
+                    <strong>Rhodine</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+            </div>      
+			</div>
+		</div>
+		
+      <div class="content content-box round-medium shadow-huge top-20">
+            <div class="tab-controls tabs-round tab-animated tabs-small tabs-rounded shadow-large" 
+                 data-tab-items="5" 
+                 data-tab-active="bg-blue2-light color-white">
+				<a href="#" data-tab="tab-9" data-tab-active><p class="fuchsia">Info</p></a>
+				<a href="#" data-tab="tab-10"><p class="lime">Chiefs</p></a>
+				<a href="#" data-tab="tab-11"><p class="silver">Tankers</p></a>
+				<a href="#" data-tab="tab-12"><p class="aqua">Air</p></a>
+				<a href="#" data-tab="tab-13"><p class="red">Close</p></a>
+          </div>
+		<div class="clear bottom-15"></div>
+			<div class="tab-content" id="tab-9">
+                <p class="bottom-0">
+           			 Use the above dropbox to list all stations in numerical order. Use the tabs below to sort the stations or resources based on your criteria. Bouncing icon indicates a Chief Station!</p>
+	       </div>
+			<div class="tab-content" id="tab-10">
+            <div class="link-list link-list-3">bat 2
+                <a href="stations/shift-commander.html" class="round-small shadow-tiny">
+					<i class="fa fa-mobile lime"></i>
+                    <span>Shift Commander</span>
+                    <strong>HQ</strong>
+                    <em class="lime">HQ</em>
+                    <i class="fa fa-check-circle lime"></i>
+                </a>
+                <a href="stations/station-18.html" class="round-small shadow-tiny">
+					<i class="fa fa-mobile red"></i>
+                    <span>Battalion Chief 1</span>
+                    <strong>Station 18/46</strong>
+                    <em class="red">Bat 1</em>
+                    <i class="fa fa-check-circle red"></i>
+                </a>
+                <a href="stations/station-5.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Battalion Chief 2</span>
+                    <strong>Station 5</strong>
+                    <em class="teal">Bat 2</em>
+                    <i class="fa fa-check-circle teal"></i>
+                </a>
+                <a href="stations/station-32.html" class="round-small shadow-tiny">
+					<i class="fa fa-mobile purple"></i>
+                    <span>Battalion Chief 3</span>
+                    <strong>Station 32</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+                <a href="stations/station-22.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Battalion Chief 4</span>
+                    <strong>Station 22</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+                <a href="stations/station-20.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Battalion Chief 5</span>
+                    <strong>Station 20</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+                <a href="stations/station-23.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Battalion Chief 6</span>
+                    <strong>Station 23</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+                <a href="stations/station-41.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Battalion Chief 7</span>
+                    <strong>Station 41</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+                <a href="stations/station-16.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Battalion Chief 8</span>
+                    <strong>Station 16</strong>					
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+	       </div>
+		</div>
+			<div class="tab-content" id="tab-11">
+            <div class="link-list link-list-3">
+                <a href="stations/station-2.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Tanker 2</span>
+                    <strong>Lithia</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+                <a href="stations/station-22.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile silver"></i>
+                    <span>Tanker 22</span>
+                    <strong>Wimauma</strong>
+                    <em class="silver">Bat 4</em>
+                    <i class="fa fa-check-circle silver"></i>
+                </a>
+                <a href="stations/station-23.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile silver"></i>
+                    <span>Tanker 23</span>
+                    <strong>Dover</strong>
+                    <em class="silver">Bat 6</em>
+                    <i class="fa fa-check-circle silver"></i>
+                </a>
+                <a href="stations/station-24.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile silver"></i>
+                    <span>Tanker 24</span>
+                    <strong>Lutz</strong>
+                    <em class="silver">Bat 7</em>
+                    <i class="fa fa-check-circle silver"></i>
+                </a>
+                <a href="stations/station-25.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile silver"></i>
+                    <span>Tanker 25</span>
+                    <strong>Springhead</strong>
+                    <em class="silver">Bat 6</em>
+                    <i class="fa fa-check-circle silver"></i>
+                </a>
+                <a href="stations/station-26.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile silver"></i>
+                    <span>Tanker 26</span>
+                    <strong>Cork Knights</strong>
+                    <em class="silver">Bat 6</em>
+                    <i class="fa fa-check-circle silver"></i>
+                </a>
+                <a href="stations/station-29.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile silver"></i>
+                    <span>Tanker 29</span>
+                    <strong>Apollo Beach</strong>
+                    <em class="silver">Bat 4</em>
+                    <i class="fa fa-check-circle silver"></i>
+                </a>
+                <a href="stations/station-34.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile silver"></i>
+                    <span>Tanker 34</span>
+                    <strong>Van Dyke</strong>
+                    <em class="silver">Bat 7</em>
+                    <i class="fa fa-check-circle silver"></i>
+                </a>
+                <a href="stations/station-46.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile silver"></i>
+                    <span>Tanker 46</span>
+                    <strong>Rhodine</strong>
+                    <em class="silver">Bat </em>
+                    <i class="fa fa-check-circle silver"></i>
+                </a>
+			</div>
+		  </div>
+			<div class="tab-content" id="tab-12">
+            <div class="link-list link-list-3">
+                <a href="stations/station-15.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile aqua"></i>
+                    <span>Air 15</span>
+                    <strong>Palm River</strong>
+                    <em class="aqua">Bat 3</em>
+                    <i class="fa fa-check-circle aqua"></i>
+                </a>
+                <a href="stations/station-42.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile aqua"></i>
+                    <span>Air 42</span>
+                    <strong>Country Place</strong>
+                    <em class="aqua">Bat 7</em>
+                    <i class="fa fa-check-circle aqua"></i>
+                </a>
+			</div>
+		  </div>
+
+		</div>
+		
+      <div class="content content-box round-medium shadow-huge top-20">
+            <div class="tab-controls tabs-round tab-animated tabs-small tabs-rounded shadow-large" 
+                 data-tab-items="5" 
+                 data-tab-active="bg-blue2-light color-white">
+				<a href="#" data-tab="tab-14"><p class="purple">Squads</p></a>
+				<a href="#" data-tab="tab-15"><p class="maroon">Trucks</p></a>
+				<a href="#" data-tab="tab-16"><p class="teal">Quints</p></a>
+				<a href="#" data-tab="tab-17"><p class="yellow">Brushes</p></a>
+				<a href="#" data-tab="tab-18"><p class="red">Close</p></a>
+          </div>
+		<div class="clear bottom-15"></div>
+			<div class="tab-content" id="tab-9">
+                <p class="bottom-0">
+           			 Use the above dropbox to list all stations in numerical order. Use the tabs below to sort the stations or resources based on your criteria.</p>
+	       </div>
+			<div class="tab-content" id="tab-14">
+            <div class="link-list link-list-3">
+                <a href="stations/station-10.html" class="round-small shadow-tiny">
+					<i class="fa fa-mobile purple"></i>
+                    <span>Squad 10</span>
+                    <strong>Armdale</strong>
+                    <em class="purple">Bat 5</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+                <a href="stations/station-11.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Squad 11</span>
+                    <strong>Brandon</strong>
+                    <em class="purple">Bat 6</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+                <a href="stations/station-14.html" class="round-small shadow-tiny">
+					<i class="fa fa-mobile purple"></i>
+                    <span>Squad 14</span>
+                    <strong>University</strong>
+                    <em class="purple">Bat 2</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+                <a href="stations/station-28.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Squad 28</span>
+                    <strong>Sun City</strong>
+                    <em class="purple">Bat 4</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+	       </div>
+		</div>
+			<div class="tab-content" id="tab-15">
+            <div class="link-list link-list-3">
+                <a href="stations/station-5.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Truck 5</span>
+                    <strong>North Hillsborough</strong>
+                    <em class="maroon">Bat 2</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+                <a href="stations/station-20.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Truck 20</span>
+                    <strong>West Hillsborough I</strong>
+                    <em class="maroon">Bat 5</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+                <a href="stations/station-28.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Truck 28</span>
+                    <strong>Sun City</strong>
+                    <em class="maroon">Bat 4</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+                <a href="stations/station-32.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Truck 32</span>
+                    <strong>East Lake</strong>
+                    <em class="maroon">Bat 3</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+                <a href="stations/station-46.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Truck 46</span>
+                    <strong>Rhodine</strong>
+                    <em class="maroon">Bat 8</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+			</div>
+		  </div>
+			<div class="tab-content" id="tab-16">
+            <div class="link-list link-list-3">
+                <a href="stations/station-3.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Quint 3</span>
+                    <strong>Summerfield</strong>
+                    <em class="teal">Bat 4</em>
+                    <i class="fa fa-check-circle teal"></i>
+                </a>
+                <a href="stations/station-7.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Quint 7</span>
+                    <strong>South Brandon</strong>
+                    <em class="teal">Bat 8</em>
+                    <i class="fa fa-check-circle teal"></i>
+                </a>
+                <a href="stations/station-42.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Quint 42</span>
+                    <strong>Country Place</strong>
+                    <em class="teal">Bat 7</em>
+                    <i class="fa fa-check-circle teal"></i>
+                </a>
+			</div>
+		  </div>
+			<div class="tab-content" id="tab-17">
+            <div class="link-list link-list-3">
+                <a href="stations/station-8.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Brush 8</span>
+                    <strong>Sundance</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+                <a href="stations/station-13.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Brush 13</span>
+                    <strong>Cirtus Park</strong>
+                    <em class="yellow">Bat 7</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>   
+				<a href="stations/station-24.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Brush 24</span>
+                    <strong>Lutz</strong>
+                    <em class="yellow">Bat 7</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+				<a href="stations/station-25.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Brush 25</span>
+                    <strong>Springhead</strong>
+                    <em class="yellow">Bat 6</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+
+			</div>
+		  </div>
+
+		</div>
+	
+      <div class="content content-box round-medium shadow-huge top-20">
+            <div class="tab-controls tabs-round tab-animated tabs-small tabs-rounded shadow-large" 
+                 data-tab-items="5" 
+                 data-tab-active="bg-blue2-light color-white">
+				<a href="#" data-tab="tab-1"><p class="red">Bat 1</p></a>
+				<a href="#" data-tab="tab-2"><p class="teal">Bat 2</p></a>
+				<a href="#" data-tab="tab-3"><p class="purple">Bat 3</p></a>
+				<a href="#" data-tab="tab-4"><p class="yellow">Bat 4</p></a>
+				<a href="#" data-tab="tab-14"><p class="red">Close</p></a>
+          </div>
+            <div class="clear bottom-15"></div>
+            <div class="tab-content" id="tab-1">
+            <div class="link-list link-list-3">
+                <a href="stations/station-7.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile red"></i>
+                    <span>Station 7</span>
+                    <strong>South Brandon</strong>
+                    <em class="red">Bat 1</em>
+                    <i class="fa fa-check-circle red"></i>
+                </a>
+                <a href="stations/station-11.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile red"></i>
+                    <span>Station 11</span>
+                    <strong>Brandon</strong>
+                    <em class="red">Bat 1</em>
+                    <i class="fa fa-check-circle red"></i>
+                </a>
+                <a href="stations/station-18.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile red"></i>
+                    <span>Station 18</span>
+                    <strong>Seffner-N. Brandon (Battalion 1)</strong>
+                    <em class="red"></em>
+                    <i class="fa fa-dumpster-fire red animated faa-bounce"></i>
+                </a>
+                <a href="stations/station-27.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile red"></i>
+                    <span>Station 27</span>
+                    <strong>Bloomingdale</strong>
+                    <em class="red">Bat 1</em>
+                    <i class="fa fa-check-circle red"></i>
+                </a>
+                <a href="stations/station-36.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile red"></i>
+                    <span>Station 36</span>
+                    <strong>Valrico</strong>
+                    <em class="red">Bat 1</em>
+                    <i class="fa fa-check-circle red"></i>
+                </a>
+                <a href="stations/station-45.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile red"></i>
+                    <span>Station 45</span>
+                    <strong>Valrico</strong>
+                    <em class="red">Bat 1</em>
+                    <i class="fa fa-check-circle red"></i>
+                </a>
+            </div>
+            </div>
+            <div class="tab-content" id="tab-2">     
+            <div class="link-list link-list-3">
+                <a href="stations/station-5.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Station 5</span>
+                    <strong>University (Battalion 2 )</strong>
+                    <i class="fa fa-check-circle teal animated faa-bounce"></i>
+                </a>
+                <a href="stations/station-14.html"  class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Station 14</span>
+                    <strong>North Hillsborough</strong>
+                    <em class="teal">Bat 2</em>
+                    <i class="fa fa-check-circle teal"></i>
+                </a>
+                <a href="stations/station-24.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Station 24</span>
+                    <strong>Lutz</strong>
+                    <em class="teal">Bat 2</em>
+                    <i class="fa fa-check-circle teal"></i>
+                </a>
+                <a href="stations/station-40.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Station 40</span>
+                    <strong>Chapman</strong>
+                    <em class="teal">Bat 2</em>
+                    <i class="fa fa-check-circle teal"></i>
+                </a>
+                <a href="stations/station-43.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile teal"></i>
+                    <span>Station 43</span>
+                    <strong>Advent Health-TPA</strong>
+                    <em class="teal">Bat 2</em>
+                    <i class="fa fa-check-circle teal"></i>
+                </a>
+			</div>      
+            </div>
+            <div class="tab-content" id="tab-3">
+            <div class="link-list link-list-3">
+                <a href="stations/station-1.html" class="round-small shadow-tiny">
+                    <i class="fad fa-mobile purple"></i>
+                    <span>Station 1</span>
+                    <strong>Progress Village</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fad fa-check-circle purple"></i>
+                </a>
+            </div>
+            <div class="link-list link-list-3">
+                <a href="stations/station-9.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Station 9</span>
+                    <strong>Sabal Park</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+            </div> 
+            <div class="link-list link-list-3">
+                <a href="stations/station-15.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Station 15</span>
+                    <strong>Palm River</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+            </div> 
+            <div class="link-list link-list-3">
+                <a href="stations/station-32.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Station 32</span>
+                    <strong>East Lake</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+			</div>      
+            <div class="link-list link-list-3">
+                <a href="stations/station-33.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Station 33</span>
+                    <strong>Falkenburg</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+            </div>     
+            <div class="link-list link-list-3">
+                <a href="stations/station-37.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile purple"></i>
+                    <span>Station 37</span>
+                    <strong>Providence Road</strong>
+                    <em class="purple">Bat 3</em>
+                    <i class="fa fa-check-circle purple"></i>
+                </a>
+            </div> 
+            </div>
+            <div class="tab-content" id="tab-4">
+            <div class="link-list link-list-3">
+                <a href="stations/station-8.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Station 8</span>
+                    <strong>Sundance</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>   
+                <a href="stations/station-17.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Station 17</span>
+                    <strong>Ruskin</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+                <a href="stations/station-22.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Station 22</span>
+                    <strong>Wimauma</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+                <a href="stations/station-28.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Station 28</span>
+                    <strong>Sun City/Ed</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+                <a href="stations/station-29.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile yellow"></i>
+                    <span>Station 29</span>
+                    <strong>Apollo Beach</strong>
+                    <em class="yellow">Bat 4</em>
+                    <i class="fa fa-check-circle yellow"></i>
+                </a>
+				</div>
+            </div>
+        </div>
+		
+        <div class="content content-box round-medium shadow-huge top-20">
+            <div class="tab-controls tabs-round tab-animated tabs-small tabs-rounded shadow-large" 
+                 data-tab-items="5" 
+                 data-tab-active="bg-pink-light color-white">
+				<a href="#" data-tab="tab-5"><p class="olive">Bat 5</p></a>
+				<a href="#" data-tab="tab-6"><p class="orange">Bat 6</p></a>
+				<a href="#" data-tab="tab-7"><p class="maroon">Bat 7</p></a>
+				<a href="#" data-tab="tab-8"><p class="green">Bat 8</p></a>
+				<a href="#" data-tab="tab-12"><p class="red">Close</p></a>
+            </div>
+            <div class="clear bottom-15"></div>
+            <div class="tab-content" id="tab-5">
+            <div class="link-list link-list-3">
+                <a href="stations/station-6.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 6</span>
+                    <strong>Henderson</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+                <a href="stations/station-20.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 20</span>
+                    <strong>West Hillsborough I</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+                <a href="stations/station-31.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 31</span>
+                    <strong>West Hillsborough II</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+                <a href="stations/station-35.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 35</span>
+                    <strong>Westchase</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+                <a href="stations/station-38.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 38</span>
+                    <strong>River Oaks</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+                <a href="stations/station-39.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile olive"></i>
+                    <span>Station 39</span>
+                    <strong>Tampa Shores</strong>
+                    <em class="olive">Bat 5</em>
+                    <i class="fa fa-check-circle olive"></i>
+                </a>
+            </div>
+            </div>
+            <div class="tab-content" id="tab-6">
+            <div class="link-list link-list-3">
+                <a href="stations/station-4.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 4</span>
+                    <strong>Armwood</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+                <a href="stations/station-21.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 21</span>
+                    <strong>Thonotosassa</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+                <a href="stations/station-23.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 23</span>
+                    <strong>Dover</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+                <a href="stations/station-25.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 25</span>
+                    <strong>Springhead</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+                <a href="stations/station-26.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 26</span>
+                    <strong>Cork-Knights</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+                <a href="stations/station-30.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile orange"></i>
+                    <span>Station 30</span>
+                    <strong>Midway</strong>
+                    <em class="orange">Bat 6</em>
+                    <i class="fa fa-check-circle orange"></i>
+                </a>
+			</div>
+			</div>
+            <div class="tab-content" id="tab-7">
+            <div class="link-list link-list-3">
+                <a href="stations/station-10.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 10</span>
+                    <strong>Armdale</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+                <a href="stations/station-13.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 13</span>
+                    <strong>Gunn Highway</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+                <a href="stations/station-19.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 19</span>
+                    <strong>Carrollwood</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+                <a href="stations/station-34.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 34</span>
+                    <strong>Van Dyke</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+                <a href="stations/station-41.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 41</span>
+                    <strong>Northdale</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+                <a href="stations/station-42.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile maroon"></i>
+                    <span>Station 42</span>
+                    <strong>Country Place</strong>
+                    <em class="maroon">Bat 7</em>
+                    <i class="fa fa-check-circle maroon"></i>
+                </a>
+			</div>
+            </div>
+            <div class="tab-content" id="tab-8">
+            <div class="link-list link-list-3">
+                <a href="stations/station-2.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 2</span>
+                    <strong>Lithia</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+                <a href="stations/station-3.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 3</span>
+                    <strong>Summerfield</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+                <a href="stations/station-12.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 12</span>
+                    <strong>Gibsonton</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+                <a href="stations/station-16.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 16</span>
+                    <strong>Riverview</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+                <a href="stations/station-44.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 44</span>
+                    <strong>Fishhawk</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+                <a href="stations/station-46.html" class="round-small shadow-tiny">
+                    <i class="fa fa-mobile green"></i>
+                    <span>Station 46</span>
+                    <strong>Rhodine</strong>
+                    <em class="green">Bat 8</em>
+                    <i class="fa fa-check-circle green"></i>
+                </a>
+            </div>      
+            </div>
+        </div>      
+		
+        <a href="#" class="back-to-top-icon back-to-top-small shadow-large bg-blue2-dark"><i class="fa fa-angle-up"></i></a>
+	</div>
+	
+        <div class="footer-menu footer-6-icons shadow-huge bottom-0 footer-menu-fixed">
+            <a href="#" data-menu="menu-calendar-dates"><i class="color-red2-dark fad fa-calendar fa-2x"></i><span>Calendar</span></a>
+            <a href="#" class="active-nav scale-box"><i class="fad fa-truck color-green1-dark"></i><span>Stations</span></a>
+            <a href="home.html"><i class="fad fa-home animated faa-shake"></i><span>Home</span></a>
+			<a href="pdf-pages/medical-protocol.html" target="_blank" rel="noopener noreferrer"><i class="fad fa-book-medical color-gray2-dark"></i><span>Medical SOP</span></a>
+			<a href="fire-sop.html"><i class="color-yellow1-dark fab fa-free-code-camp"></i><span>Fire SOP</span></a>
+            <a href="#" data-menu="menu-navigation2"><i class="fa fa-bars color-teal-dark"></i><span>Menu</span></a>
+            <div class="clear"></div>
+        </div>op 
+	
+	<div id="action-gps"
+         class="menu-box menu-box-detached round-medium"
+         data-menu-type="menu-box-bottom"
+         data-menu-height="560"
+         data-menu-effect="menu-over">
+        
+        <div class="content content-box round-medium shadow-huge">
+			<center><h4>Where Are You?</h4></center>
+            <a href="#" class="get-location button button-full bg-blue2-dark button-m button-round-small shadow-large top-20">Get Your Location</a>
+            <p class="location-coordinates"></p>
+            <div class="responsive-iframe bottom-30 add-iframe">
+                <iframe class="location-map" src="https://maps.google.com/?ie=UTF8&amp;ll=47.595131,-122.330414&amp;spn=0.006186,0.016512&amp;t=h&amp;z=17&amp;output=embed"></iframe>
+            </div>
+        </div>
+        <a href="#" class="close-menu button button-m bg-blue2-dark button-margins button-round-medium shadow-huge button-center-medium">CLOSE</a>        
+    </div>  
+		
+	<div id="menu-calendar-duty"
+         class="menu-box menu-box-detached round-medium"
+         data-menu-type="menu-box-top"
+         data-menu-height="600"
+         data-menu-load="menu-calendar-duty.html"
+         data-menu-effect="menu-over">
+    </div>
+	
+	<div id="menu-calendar-dates"
+         class="menu-box menu-box-detached round-medium"
+         data-menu-type="menu-box-top"
+         data-menu-height="600"
+         data-menu-load="menu-calendar-dates.html"
+         data-menu-effect="menu-over">
+    </div>
+
+	
+    <div id="menu-navigation"
+         class="menu-box menu-box-gradient menu-transparent"
+         data-menu-type="menu-box-left"
+         data-menu-width="260"
+         data-menu-active="nav-welcome"
+         data-menu-load="menu-navigation.html"
+         data-menu-effect="menu-over">
+    </div>  
+	
+	
+    <div id="menu-navigation2"
+         class="menu-box menu-box-gradient menu-transparent"
+         data-menu-type="menu-box-right"
+         data-menu-width="260"
+         data-menu-active="nav-welcome"
+         data-menu-load="menu-navigation.html"
+         data-menu-effect="menu-over">
+    </div>  
+    
+    <div id="menu-settings"
+         class="menu-box menu-box-gradient"
+         data-menu-type="menu-box-modal"
+         data-menu-height="100%"
+         data-menu-width="100%"
+         data-menu-load="menu-settings.html"
+         data-menu-effect="menu-over">
+    </div>
+    
+    <div id="menu-contact"
+         class="menu-box menu-box-detached round-medium"
+         data-menu-type="menu-box-modal"
+         data-menu-height="470"
+         data-menu-load="menu-contact.html"
+         data-menu-effect="menu-over">
+    </div>    
+	
+    <div id="menu-search"
+         class="menu-box menu-box-detached round-medium"
+         data-menu-type="menu-box-top"
+         data-menu-height="390"
+         data-menu-load="menu-search.html"
+         data-menu-effect="menu-over">
+    </div>
+	
+    <div class="menu-hider"></div>
+
+	</div>
+	
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+
+<script src="/__/firebase/7.3/firebase-app.js"></script>
+<script src="/__/firebase/7.3/firebase-analytics.js"></script>
+<script src="/__/firebase/7.3/firebase-storage.js"></script>
+<script src="/__/firebase/init.js"></script>
+</body>
+</html>
+
+    

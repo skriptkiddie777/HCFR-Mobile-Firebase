@@ -1,0 +1,188 @@
+{
+    "items": [
+		{
+			"name": "A Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "15",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "1"
+		},
+		{
+			"name": "B Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "16",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "2"
+		},
+		{
+			"name": "C Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "17",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "3"
+		},
+		{
+			"name": "A Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "18",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "1"
+			
+		},
+		{
+			"name": "B Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "19",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "2"
+			
+		},
+		{
+			"name": "C Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "20",
+			"month": "10",
+			"year": "2020",
+			"color": "3"
+		},
+		{
+			"name": "A Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "21",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "1"
+			
+		},
+		{
+			"name": "B Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "22",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "2"
+		},
+		{
+			"name": "C Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "23",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "3"
+			
+		},
+		{
+			"name": "A Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "24",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "1"
+		},
+		{
+			"name": "B Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "25",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "2"
+		},
+		{
+			"name": "C Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "26",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "3"
+		},
+		{
+			"name": "A Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "27",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "1"
+		},
+		{
+			"name": "B Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "28",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "2"
+		},
+		{
+			"name": "C Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "1",
+			"month": "12",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "1"
+		},
+		{
+			"name": "A Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "1",
+			"month": "10",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "1"
+		},
+		{
+			"name": "B Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "1",
+			"month": "11",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "1"
+			
+		},
+		{
+			"name": "C Shift",
+			"image": "events/images/saftey-inspection.jpg",
+			"day": "1",
+			"month": "12",
+			"year": "2020",
+			"time": "8:00 am",
+			"duration": "1",
+			"color": "1"
+			
+		}
+	]
+}

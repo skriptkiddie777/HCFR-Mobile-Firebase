@@ -1,0 +1,368 @@
+.weight-section {
+ margin: 20px 0px;
+ border-radius: 15px;
+ display: flex;
+ flex-wrap: wrap;
+ font-size: 1.125rem;
+ color: #303030;
+ font-weight: bold;
+}
+
+#theweight, #drug {
+ color: black !important;
+ border-style: solid;
+ border-color: black;
+ border-radius: 15px;
+ border-width: 1px;
+ padding: 10px;
+}
+
+#theweight2, #drug2 {
+ color: black !important;
+ border-style: solid;
+ border-color: black;
+ border-radius: 5px;
+ border-width: 1px;
+ padding: 10px;
+}
+
+#drug {
+ width: 90%;
+
+}
+
+#drug2 {
+ width: 80%;
+
+}
+
+.drug-section > div{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+}
+
+.tooltip {
+ position: relative;
+ display: inline-block;
+}
+
+.tooltip .tooltiptext {
+ visibility: hidden;
+ width: 120px;
+ background-color: black;
+ color: #fff;
+ text-align: center;
+ border-radius: 6px;
+ padding: 5px 0;
+ position: absolute;
+ z-index: 1;
+ bottom: 150%;
+ left: 50%;
+ margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+ content: "";
+ position: absolute;
+ top: 100%;
+ left: 50%;
+ margin-left: -5px;
+ border-width: 5px;
+ border-style: solid;
+ border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+ visibility: visible;
+}
+
+
+.nzf-section__item-dosing{
+ color: black;
+ text-align: center;
+}
+
+.nzf-section__item-information{
+ color: black;
+ text-align: center;
+ padding-top: 7px;
+}
+
+.nzf-section__image {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ padding: 10px 10px 5px 0px;
+ margin-top: 15px;
+ background: #a8d17e;
+}
+
+.nzf-section__item {
+margin-left: 5px;
+}
+
+
+
+#subtitle {
+ text-align: center;
+ font-size: 1.125rem;
+ margin: 30px;
+ color: black !important;
+}
+
+body2 {
+ font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+ margin: 0;
+}
+
+.error-section {
+ font-size: 16px;
+ text-align: center;
+ border: 1px solid #ed5565;
+ background-color: #fcdfe2;
+ color: #ed5565;
+ margin: 1em 1em;
+ padding: 1em;
+ display: none;
+}
+
+.error-section2 {
+ font-size: 16px;
+ text-align: center;
+ border: 1px solid #ed5565;
+ background-color: #fcdfe2;
+ color: #ed5565;
+ margin: 1em 1em;
+ padding: 1em;
+ display: none;
+}
+
+.message-section2 {
+ color: #ed5565;
+ font-size: 16px;
+ text-align: center;
+}
+
+.message-section1 {
+ color: blue;
+ font-size: 16px;
+ text-align: center;
+ margin-top: 10px;
+}
+
+.calculate-section {
+ display: flex;
+ justify-content: center;
+ margin-bottom: 30px;
+}
+
+.drug-section,
+.weight-section {
+ margin: 20px 0px;
+ display: flex;
+ flex-wrap: wrap;
+ font-size: 1.125rem;
+ color: #303030;
+ font-weight: bold;
+}
+
+.title-section {
+ display: flex;
+ flex-wrap: wrap;
+ font-size: 1.375rem;
+ color: #303030;
+ font-weight: bold;
+ padding: 10px;
+ /* background:#a8d17e;*/
+ background-color: #a8d17e;
+ border-bottom: 5px solid rgb(58,184,231);
+ opacity: 1;
+}
+
+.result-section {
+ margin: 10px 30px;
+ color: black !important;
+}
+
+.result-mls-section__item,
+.result-mgs-section__item {
+ width: 60%;
+ padding:10px 10px 10px 10px;
+ text-align: left;
+ border-radius: 15px;
+ margin-bottom: 20px;
+}
+
+.result-mls-section__result,
+.result-mgs-section__result {
+ background: whitesmoke;
+ border-style: solid;
+ border-color: black;
+ border-radius: 15px;
+ border-width: 1px;
+}
+
+.result-mls-section,
+.result-mgs-section {
+ display: flex;
+ flex-direction: row;
+ justify-content: left;
+
+}
+.result-mls-section__item,
+.result-mgs-section__item {
+}
+.result-mls-section__label,
+.result-mgs-section__label {
+ 
+}
+.result-mls-section__result,
+.result-mgs-section__result {
+
+}
+
+.result-section2 {
+ margin: 10px 30px;
+ color: black !important;
+}
+
+.result-mls-section2__item,
+.result-mgs-section2__item {
+ width: 80%;
+ padding:20px 15px 20px 15px;
+ text-align: center;
+ margin-bottom: 5px;
+}
+
+.result-mls-section2__result,
+.result-mgs-section2__result {
+ background: whitesmoke;
+ border-style: solid;
+ border-color: black;
+ border-width: 1px;
+}
+
+.result-mls-section2,
+.result-mgs-section2 {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+
+}
+.result-mls-section2__item,
+.result-mgs-section2__item {
+}
+.result-mls-section2__label,
+.result-mgs-section2__label {
+ 
+}
+.result-mls-section2__result,
+.result-mgs-section2__result {
+
+}
+
+
+.title-section {
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ margin: 0 0px;
+}
+.title-section__label {
+ text-align: center;
+}
+.title-section__item {
+ margin: 5px;
+}
+
+.weight-section {
+ flex-direction: row;
+ justify-content: center;
+ border-radius: 15px;
+ align-items: center;
+}
+.weight-section__item {
+ padding: 0 15px;
+ border-radius: 15px;
+}
+.weight-section__label{
+ border-radius: 15px;
+}
+.weight-section__input {
+ padding: 6px;
+ border-radius: 15px;
+ width: 20%;
+ background: whitesmoke;
+}
+
+.drug-section {
+ flex-direction: column;
+ justify-content: center;
+}
+.drug-section__item {
+ margin: 10px auto;
+ line-height: 26px;
+}
+
+#paracetamol250label,
+#paracetamol120label {
+ cursor: pointer;
+}
+
+#pregicon {
+ height: 68px;
+}
+
+#calc_source {
+ font-size: 12px !important;
+ text-align: center;
+}
+
+#calculator {
+
+ min-width: 300px;
+ max-width: 500px;
+ width: 100%;
+ -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+ box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+ no-repeat top;
+ background-image: linear-gradient(
+ to bottom,
+ rgba(255, 255, 255, 0.1) 0%,
+ rgba(255, 255, 255, 0.1) 100%
+ ),
+ /*background-color: rgb(231, 231, 231);*/
+ /*border-style: solid;
+ border-color: black;
+ border-radius: 5px;
+ border-width:1px;*/
+}
+
+/* Calculate button*/
+#calcbutton {
+ color: black;
+ background-color: #a8d17e;
+ padding: 10px;
+ font-weight: bold;
+ border-style: solid;
+ border-color: black;
+ border-radius: 3px;
+ border-width: 1px;
+}
+
+#calcbutton:hover {
+ background-color: #dbffb1;
+ color: black;
+ cursor: pointer;
+}
+
+#calcbutton:focus {
+ background-color: #dbffb1;
+}
+
+#calcbutton:active {
+ -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+ -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+ box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+}

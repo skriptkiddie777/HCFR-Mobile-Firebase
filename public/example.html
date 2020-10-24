@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">  
+
+
+
+	<title>NightOwl 1.2 Example</title>
+
+	<!-- DEMO-ONLY STYLES -->
+	<style>
+    	.main {width:450px; margin:0 auto; margin-top:50px; }
+		h2 {font-family:'Arial'; color:#333; opacity:0.4; font-size:16px; font-weight:normal; text-align:center;}
+		input.velocity_field {margin-left:90px; width:250px;}
+    </style>
+    
+    <!-- LOAD NightOwl CSS -->
+	<link rel="stylesheet" type="text/css" media="screen" href="NightOwl/css/jquery-nightowl-1.2.css"/>        
+		
+	<!-- LOAD JQUERY -->
+	<script src="NightOwl/js/jquery-1.11.1.min.js"></script>		
+	<!-- LOAD NightOwl 1.2 -->
+	<script type="text/javascript" src="NightOwl/js/jquery-nightowl-1.2.js"></script>
+        
+    <script type="text/javascript">
+		$(window).load(function(){
+			$('div.night_owl_calc').NightOwl({ "drag" : "false" });
+			$('div.no_mini').NightOwl();
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div class="main">
+       <div class="demo-buttons button-full">
+            <a href="tools.html" class="button shadow-huge button-3d button-m bg-pink-dark border-pink-dark">Go Back</a>
+		</div>
+    	<h2>Use Landscape For Better View</h2>
+    	<!-- STANDARD CALCULATOR -->
+        <div class="night_owl_calc"></div>
+    
+
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js" async></script>
+</body>
+</html>

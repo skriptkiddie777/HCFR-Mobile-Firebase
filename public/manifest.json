@@ -1,0 +1,14 @@
+{
+    "name": "Hcfr-mobile-guide88 Push Notification",
+    "short_name": "hcfr-mobile-guide88",
+    "gcm_sender_id": "77881030995",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "https://cdn.pushalert.co/icons/default_icon-25589_5.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

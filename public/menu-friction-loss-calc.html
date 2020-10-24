@@ -1,0 +1,135 @@
+    <div id="menu-friction-loss">
+		<div class="content bottom-0 drug olive">
+			<div class="title-pedi top-10 center-text">
+    			<h3 class="font-900 top-20 bottom-10" style="color: #F7039A">Friction Loss Calculator</h3>
+			</div>
+				<p class="under-heading bottom-10 font-16 aqua">Enter the hose diameter, the gallons per minute (GPM), and the length into the Friction Loss Calculator. Press the submit button to calculate.</p>
+				<div class="clear">
+    			<h3 class="top-20 bottom-10 a" style="color: #0ACBFC">Diameter of Hose</h3>
+						<div class="form-field top-10">
+							<label class="field-title contactNameField" for="contactNameField"></label>
+							<div>
+ 								<select id="c" name='c' onchange="calculateTotalMls(); calculateMgsTotal()">
+									<option value="None">Select Size</option>
+									<option value="Adenosine1">Adenosine 6mg/3mL (0.1mg/kg)</option>
+									<option value="Adenosine2">Adenosine 6mg/3mL (0.2mg/kg)</option>
+									<option value="Amiodarone">Amiodarone 300mg/3ml (5mg/kg)</option>
+									<option value="Atropine">Atropine 1mg/10mL (0.02mg/kg</option>
+									<option value="Dextrose10">Dextrose 10% 12.5mg/50mL (0.25mg/kg)</option>
+									<option value="Dextrose25">Dextrose 25% 12.5mg/50mL (1.0mg/kg)</option>
+									<option value="Diphenhydramine-anaphylaxis">Diphenhydramine: Anaphylaxis 50mg/1mL (1.0mg/kg)</option>
+									<option value="Diphenhydramine-dystonia">Diphenhydramine: Dystonia 50mg/1mL (0.5mg/kg)</option>
+									<option value="Epinephrine1000">Epinephrine 1:1000 1mg/mL (0.01mg/kg)</option>
+									<option value="Epinephrine10000">Epinephrine 1:10,000 1mg/10mL (0.01mg/kg)</option>
+									<option value="Fentanyl">Fentanyl 250mcg/5mL (1mcg/kg)</option>
+									<option value="Lidocaine">Lidocaine 100/5mL (1mg/kg)</option>
+									<option value="Magnesium">Magnesium Sulfate 5gm/10mL (40mg/kg)</option>
+									<option value="Methylprednisolone">Methylprednisolone 125mg/2mL (1mg/kg)</option>
+									<option value="Midazolam">Midazolam 10mg/2mL (0.2mg/kg)</option>
+									<option value="Morphine">Morphine Sulfate 10mg/10mL (0.1mg/kg)</option>
+									<option value="Naloxone">Naloxone 2mg/2mL (0.1mg/kg)</option>
+									<option value="Ondansetron">Ondansetron 4mg/2mL (0.1mg/kg)</option>
+								</select>
+							</div>
+						</div>
+					
+<select id="c" name="c">
+<option selected="selected" value="1100">3/4 inch</option>
+<option value="150">1 inch</option>
+<option value="80">1 1/4 inch</option>
+<option value="24">1 1/2 inch</option>
+<option value="15.5">1 3/4 inch</option>
+<option value="8">2 inch</option>
+<option value="2">2 1/2 inch</option>
+<option value=".677">3 inch</option>
+<option value=".34">3 1/2 inch</option>
+<option value=".2">4 inch</option>
+<option value=".1">4 1/2 inch</option>
+<option value=".08">5 inch</option>
+<option value=".05">6 inch</option>
+</select>
+</div>
+<div class="clear">
+Enter GPM (Gallons Per Minute):
+<input id="q" name="q" type="text" />
+<span id="qerror" class="red"></span>
+</div>
+<div class="clear">
+Hose Length (Feet)
+<input id="l" name="l" type="text" />
+<span id="lerror" class="red"></span>
+</div>
+<div class="clear">
+<div class="calc">
+<br />
+<input type="button" value="Calculate" onClick="if (!window.__cfRLUnblockHandlers) return false; calcflc();" data-cf-modified-6fadaffa3cd17829926baeb7-="" />
+<br />
+<br />
+</div>
+</div>
+<div class="clear">
+<strong>Friction Loss Results (PSI): <div id="theresult" name="theresult" style="display:inline; background:gold;font-size:200%;"></div></strong>
+</div>
+<div>
+<strong style="font-weight: bold; font-size: 1.1em;">
+<br />
+<br />
+</strong>
+</div>
+<div class="clear"></div>
+</div>
+<div class="page-description">
+<h2>Friction Loss Calculations Explained:</h2><br>
+Friction loss occurs when water passes through a hose or pipe. Distance, diameter, and the GPM / volume, all affect friction loss. As water passes through the hose / pipe,
+friction between the water and the inside surface of the hose / pipe causes turbulence. This turbulence reduces the energy produced by the pump (PSI). As a result, the PSI
+at the other end of the hose will be lower. The higher the GPM passing through a hose or pipe, the more turbulance and friction loss will result.<br />
+<br />
+</div>
+<div class="printdownload clearfix">
+<h2>Printable Friction Loss Calculator Charts</h2>
+<a style="width: 115px; margin-right: 6px; display: block; float: left; text-align: center; overflow-y: hidden;" href="/fire-dept-tools/printable-friction-loss-calculator/one-inch">
+<img src="/images/printable-friction-loss-charts/1-inch-small.png" alt="download 1 inch printable friction loss calculator" /><br />
+1 Inch</a>
+<a style="width: 115px; margin-right: 6px; display: block; float: left; text-align: center; overflow-y: hidden;" href="/fire-dept-tools/printable-friction-loss-calculator/one-and-a-half-inch">
+<img src="/images/printable-friction-loss-charts/1.5-inch-small.png" alt="download 1 1/2 inch printable friction loss calculator" /><br />
+1 1/2 Inch</a>
+<a style="width: 115px; margin-right: 6px; display: block; float: left; text-align: center; overflow-y: hidden;" href="/fire-dept-tools/printable-friction-loss-calculator/one-and-three-quarter-inch">
+<img src="images/pictures/1.75-inch.png" alt="download 1 3/4 inch printable friction loss calculator" /><br />
+1 3/4 Inch</a>
+<a style="width: 115px; margin-right: 6px; display: block; float: left; text-align: center; overflow-y: hidden;" href="/fire-dept-tools/printable-friction-loss-calculator/two-inch">
+<img src="/images/printable-friction-loss-charts/2-inch-small.png" alt="download 2 inch printable friction loss calculator" /><br />
+2 Inch</a>
+<a style="width: 115px; margin-right: 6px; display: block; float: left; text-align: center; overflow-y: hidden;" href="/fire-dept-tools/printable-friction-loss-calculator/two-and-a-half-inch">
+<img src="/images/printable-friction-loss-charts/2.5-inch-small.png" alt="download 2 1/2 inch printable friction loss calculator" /><br />
+2 1/2 Inch</a>
+<a style="width: 115px; margin-right: 6px; display: block; float: left; text-align: center; overflow-y: hidden;" href="/fire-dept-tools/printable-friction-loss-calculator/three-inch">
+<img src="/images/printable-friction-loss-charts/3-inch-small.png" alt="download 3 inch printable friction loss calculator" /><br />
+3 Inch</a>
+</div>
+
+</div>
+
+<script type="6fadaffa3cd17829926baeb7-text/javascript">
+        function calcflc() {
+
+            var c = $("#c").val();
+            var q = $("#q").val();
+            var l = $("#l").val();
+
+            var qh = q/100;
+            var flc = c * Math.pow(qh,2) * (l/100);
+
+            $("#theresult").html(flc);
+            $("#theresult").css("padding: 5px;");
+
+        }
+    </script>
+
+<div style="width: 100%;">
+
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="6fadaffa3cd17829926baeb7-text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js" type="6fadaffa3cd17829926baeb7-text/javascript"></script>
+<script src="/js/funcs.js" type="6fadaffa3cd17829926baeb7-text/javascript"></script>
+</html>

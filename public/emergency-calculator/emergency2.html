@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Emergency Drug Calculator</title>
+<link rel="stylesheet prefetch" href="css/bootstrap.min.css">
+<link rel="stylesheet prefetch" href="css/shards.min.css">
+<link rel="stylesheet prefetch" href="css/bootstrap-select.min.css">
+<link rel="stylesheet prefetch" href="../styles/framework.css">
+<link rel="stylesheet prefetch" href="../styles/colors.css">
+<link rel="stylesheet" media="all" href="../fonts/css/fontawesome-all.css">
+<link rel="stylesheet" media="all" href="../fonts/css/fontawesome-all.min.css">
+<link rel="stylesheet" media="all" href="../fonts/css/font-awesome-animation.min.css">
+<link rel="stylesheet" media="all" href="../fonts/css/all.css">
+<link rel="stylesheet" type="text/css" href="../fonts/css/solid.min.css">
+<link rel="stylesheet" type="text/css" href="../fonts/css/light.min.css">
+<link rel="stylesheet" type="text/css" href="../fonts/css/duotone.css">
+<link rel="stylesheet" media="screen" href="css/tablesaw.css">
+<link rel="stylesheet" media="screen" href="css/style.css">
+<link href="css/app.css" media="screen" rel="stylesheet">
+<style>
+
+
+body{padding-bottom:100px;}
+</style>
+<script type="e5e784237edaf5129f446e02-text/javascript">
+  (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+
+  ga("create", "UA-255701-13", "auto");
+  ga("send", "pageview");
+
+</script>
+<style>
+tr.eachdrug.hidden-print.hidden {
+    display: none !important;
+}
+tr.eachdrug.hidden{display:none;}
+td.printcolumn, th.printcolumn, .tablesaw-stack thead th.printcolumn {
+  display:none ;
+text-align: left !important;
+max-width: 70px !important;}
+.hideme{display:none;}
+
+</style>
+<link href="../css/print.css" media="print" rel="stylesheet">
+</head>
+<body>
+
+	<div class="header header-fixed header-logo-app">
+        <a href="#" class="back-button header-logo"></a>
+		<a href="#" class="header-icon header-icon-1 back-button"><i class="fas fa-arrow-left"></i></a>
+		<a href="../index.html" class="header-icon header-icon-2"><i class="fad fa-home animated faa-wrench lime"></i></a>
+	</div>     
+
+
+<div class="main-navbar  bg-white">
+<div class="container-fluid p-0">
+
+<nav class="navbar align-items-stretch blue-grey navbar-dark flex-md-nowrap p-1">
+<nav class="nav">
+<a href="#" class="nav-link nav-link-icon toggle-sidebar d-inline d-lg-none text-center " data-toggle="collapse" data-target=".header-navbar" aria-expanded="false" aria-controls="header-navbar">
+<i class="fas fa-bars fa-lg"></i>
+</a>
+</nav>
+</nav>
+</div> 
+</div>
+	
+<div id="emergencyPage" class="container-fluid">
+
+<div class="starter-template text-center">
+
+<h1 class="wow fadeIn" data-wow-delay="0.2s"><i class="fa fa-ambulance animate faa-wrench red"></i> Emergency Drugs</h1>
+
+</div>
+<span class="date"></span>
+<hr>
+<div class="collapse in" id="informationE">
+<div class="patient-content">
+<div class="row no-gutters">
+<div class="col-1 patientCol pdata">ID#: <span class="output" id="idE2"></span></div>
+<div class="col-2 patientCol pdata">Patient: <span class="output" id="pet_nameE2"></span></div>
+<div class="col-2 patientCol pdata">Owner: <span class="output" id="owner_nameE2"></span></div>
+<div class="col-1 patientCol pdata">Age: <span class="output" id="ageE2"></span></div>
+<div class="col-2 patientCol pdata">Procedure: <span class="output" id="procedureE2"></span></div>
+<div class="col-2 patientCol pdata">Sex: <span class="output" id="sexE2"></span></div>
+</div>
+</div>
+
+<form action="" id="petdataE" class="hidden-print">
+<div class="row pets">
+
+<div class="col-md-1 pl-0 pr-0">
+<label for="basic-url">Incident #</label>
+<div class="input-group input-group-seamless">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="hidden-print fas fa-hashtag"></i>
+</div>
+</div>
+<input type="text" name="idE" placeholder="Incident #" class="form-control phoenix-input patient" data-id="#idE2">
+</div>
+</div>
+<div class="col-md-2 pl-0 pr-0">
+<label for="basic-url">Patient</label>
+<div class="input-group input-group-seamless">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="hidden-print fas fa-user-md"></i>
+</div>
+</div>
+<input type="text" name="petE" placeholder="Patient Name" class="form-control phoenix-input patient" data-id="#pet_nameE2">
+</div>
+</div>
+
+<div class="col-md-1 pl-0 pr-0">
+<label for="basic-url">Age</label>
+<div class="input-group input-group-seamless">
+<div class="input-group-prepend">
+<div class="input-group-text">
+<i class="hidden-print fas fa-clock"></i>
+</div>
+</div>
+<input type="text" name="ageE" placeholder="Age" class="form-control phoenix-input patient" data-id="#ageE2">
+</div>
+</div>
+
+<div class="col-md-4 pl-0 pr-0 text-center">
+<label class="hidden-print" for="basic-url">Sex</label>
+<div class="md-form">
+<select class="phoenix-input patient" name="speciesEm" title="Species:" data-width="100px" data-id="#speciesE2">
+<option value="Canine">Male</option>
+<option value="Feline">Female</option>
+</select>
+
+<button type="button" class="close hidden-print patient collapsed pull-right" data-toggle="collapse" data-target="#informationE" aria-label="Close" style="margin-right: 10px;margin-top: -30px;">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+</div>
+</div>
+</form>
+
+<hr>
+</div> 
+<div class="patient-content">
+<div class="row no-gutters">
+<div class="col-2 patientCol pdata"><span class="output" id="wtlbE2"></span> Lbs</div>
+<div class="col-2 patientCol pdata"><span class="output" id="wtkgE2"></span> Kgs</div>
+</div>
+</div>
+<div class="row  hidden-print">
+
+<div class="col-md-3">
+<div class="input-group md-form">
+<input id="inputPounds" name="inputPoundsE" class="form-control phoenix-input patient" type="number" placeholder="Enter Pounds" oninput="if (!window.__cfRLUnblockHandlers) return false; weightConverter(this.id,this.value)" onchange="if (!window.__cfRLUnblockHandlers) return false; weightConverter(this.id,this.value)" data-id="#wtlbE2" data-cf-modified-e5e784237edaf5129f446e02-="">
+<div class="input-group-append">
+<span class="input-group-text">lbs</span>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="input-group md-form">
+<input id="inputKilograms" name="inputKilogramsE" class="form-control phoenix-input patient" type="number" placeholder="Enter Kilograms" oninput="if (!window.__cfRLUnblockHandlers) return false; weightConverter(this.id,this.value)" onchange="if (!window.__cfRLUnblockHandlers) return false; weightConverter(this.id,this.value)" data-id="#wtkgE2" data-cf-modified-e5e784237edaf5129f446e02-="">
+<div class="input-group-append">
+<span class="input-group-text">kgs</span>
+</div>
+</div>
+</div>
+<div class="col-md-6 hidden-print">
+<div class="input-group">
+<span class="btn-group-toggle" data-toggle="buttons">
+<label class="btn btn-light lbl6 collapsed" data-toggle="collapse" data-target="#editDrugs">
+<input id="toggleDrugs" type="checkbox" autocomplete="off"> <span class="caption">Edit Drugs <i class="fas fa-tasks fa-fw fa-lg fa-fw"></i></span>
+</label>
+</span>
+<span class="input-group-btn">
+<button class="btn btn-light hidden-print patientbutton collapsed" type="button" data-toggle="collapse" data-target="#informationE">Enter Patient Info <i class="far fa-clipboard fa-lg fa-fw"></i> </button>
+</span>
+<span class="input-group-btn">
+<button class="resetme btn btn-light hidden-print" type="button" data-phoenix-action="remove"><i class="refresh-link fas fa-sync fa-lg fa-fw"></i> Reset</button>
+</span>
+<span class="input-group-btn">
+<button data-rel="drug" data-print="#emergencyPage" class="printme btn btn-light hidden-print" type="button"><i class="fa fa-print fa-lg fa-fw"></i> </button>
+</span>
+</div>
+</div>
+</div>
+
+<p></p>
+<div class="wt_error" style="display:none;color:red;">Invalid - Please Enter a number</div>
+<button class="btn btn-danger emergencyInfo d-print-none" type="button" data-toggle="collapse" data-target="#cpr1" aria-expanded="false" aria-controls="collapseExample"> ACLS Info <i class="fa fa-chevron-down"></i> </button>
+<button class="btn btn-danger emergencyInfo d-print-none" data-toggle="modal" data-target="#recover">Emergency Flow Chart</button>
+<div class="collapse" id="cpr1">
+<div class="card card-block">
+<ul style="color:red;">
+<li>Perform 100-120 chest compressions/minute of 1/3 to 1/2 of chest width, with animal lying on its side.</li>
+<li>Ventilate intubated dogs and cats at a rate of 10 breaths per minute.</li>
+<li>For mouth-to-snout ventilation, maintain a compression-to-ventilation ratio of 30-2.</li>
+<li>Perform CPR in 2-minute cycles, switching the person performing the compressions with each cycle.</li>
+<li>Administer vasopressors every 3 to 5 minutes during CPR.</li>
+</ul>
+</div>
+</div>
+<div class="collapse in navbar-collapse hidden-print" id="editDrugs">
+<div class="row">
+<div class="col-md-2 hidden-print">
+<div class="btn-group-toggle" data-toggle="buttons">
+<label id="Edrugs" class="btn btn-light btn-sm">
+<input name="Edrugs" class="phoenix-input" type="checkbox" checked>Toggle All <i class="fas fa-check-square" style="color:#007bff"></i>
+</label>
+</div>
+</div>
+<div class="col-md-10 hidden-print">
+Use <i class="fas fa-check-square" style="color:#007bff"></i> to select which drugs to show and print. Re-order drugs using <i class="far fa-bars hidden-print" style="color:#000000"></i>. Your selections and order will be saved in this browser.
+</div>
+</div>
+</div>
+<table id="dosechart3" class="dogs table-sm table table-bordered table-striped tablesaw" data-tablesaw-mode="stack">
+<thead class="thead-default">
+<tr>
+<th scope="col" data-tablesaw-priority="" class="printcolumn hidden-print"></th>
+<th scope="col" data-tablesaw-priority="persist">Drug</th>
+<th scope="col" data-tablesaw-priority="2" class="condition">Condition</th>
+<th scope="col" data-tablesaw-priority="2" class="usage">Dose Range</th>
+<th scope="col" data-tablesaw-priority="2" class="dosage">Drug Dosage</th>
+<th scope="col" data-tablesaw-priority="2" class="dosage">Dose</th>
+<th scope="col" data-tablesaw-priority="2">Volume (ml)</th>
+</tr>
+</thead>
+<tbody id="emergency-target">
+<tr class="table-row eachdrug" data-id="1"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="EpinephrineH" id="EpinephrineH">
+<label class="custom-control-label" for="EpinephrineH">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Epinephrine (High)
+</span><div class="subtitle">1 mg/ml</div></td>
+<td>asystole</td>
+<td><span>0.1-0.2mg/kg IV </span><span class="subtitle">repeat Q3-5min</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" name="epiDogHi" type="number" data-mg="#epiDogHimg" data-ml="#epiDogHi" data-conc="1" value="0.1" data-value="0.1" data-min="0.1" data-max="0.5" data-step="0.1" data-postfix="mg/kg" data-decimal="2"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div> </div></td>
+<td class="dosage table-primary" id="epiDogHimg"></td>
+<td class="vol table-success" id="epiDogHi"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="2"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="EpinephrineL" id="EpinephrineL">
+<label class="custom-control-label" for="EpinephrineL">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Epinephrine (Low)
+</span><div class="subtitle">1 mg/ml</div></td>
+<td>asystole</td>
+<td><span>0.01-0.02mg/kg IV </span><span class="subtitle">repeat Q3-5min</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" name="epiDogLo" type="number" data-mg="#epiDogLomg" data-ml="#epiDogLo" data-conc="1" value="0.01" data-value="0.1" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="3"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-primary" id="epiDogLomg"></td>
+<td class="vol table-success" id="epiDogLo"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="3"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Vassopressin" id="Vassopressin">
+<label class="custom-control-label" for="Vassopressin">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Vassopressin
+</span><div class="subtitle">20 units/ml</div></td>
+<td>antiarrhythmic</td>
+<td><span>0.8U/kg IV</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" U" data-appendVol=" ml" name="vassopressinDog" type="number" data-mg="#vassopressinDogMG" data-ml="#vassopressinDog" data-conc="20" data-min="0.4" data-max="1.6" data-step="0.1" data-postfix="U/kg" data-decimal="2" value="0.8" data-value="0.8"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-primary" id="vassopressinDogMG"></td>
+<td class="vol table-success" id="vassopressinDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="4"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="atropineE" id="atropineE">
+<label class="custom-control-label" for="atropineE">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Atropine sulfate
+</span><div class="subtitle">0.54 mg/ml</div></td>
+<td>bradycardia</td>
+<td><span>0.02mg/kg IV, IM</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" data-mg="#atroDogmg" data-ml="#atroDog" name="atropine2" type="number" data-conc="0.54" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="2" data-value="0.02" value="0.02"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td id="atroDogmg" class="vol table-primary"></td>
+<td class="vol table-success" id="atroDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="5"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="glycoE" id="glycoE">
+<label class="custom-control-label" for="glycoE">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Glycopyrrolate
+</span><div class="subtitle">0.2 mg/ml</div></td>
+<td>bradyarrhythmias</td>
+<td><span>0.011 mg/kg IV or IM</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" data-mg="#glycoDogmg" data-ml="#glycoDog" name="glyco2" type="number" data-conc="0.2" data-min="0.011" data-max="0.033" data-step="0.011" data-postfix="mg/kg" data-decimal="3" value="0.011" data-value="0.011"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="vol table-primary" id="glycoDogmg"></td>
+<td class="vol table-success" id="glycoDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="6"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="calciumE" id="calciumE">
+<label class="custom-control-label" for="calciumE">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Calcium gluconate
+</span><div class="subtitle">100 mg/ml</div></td>
+<td>hypocalcemia</td>
+<td><span>94-140 mg/kg slow IV</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" name="calcium2" type="number" data-mg="#calciumDogmg" data-ml="#calciumDog" data-conc="100" data-min="94" data-max="140" data-step="1" data-postfix="mg/kg" data-decimal="2" value="94" data-value="94"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="vol table-primary" id="calciumDogmg"></td>
+<td class="vol table-success" id="calciumDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="7"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="iv1" id="iv1">
+<label class="custom-control-label" for="iv1">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">IV Fluids 1x</span><div class="subtitle">1x maint</div></td>
+<td>Maintenance </td>
+<td><span>(30cc x kg) + 70cc IV</span></td>
+<td><div><input class="form-control form-control-sm fluid" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#main1Dog" name="main1Dog" type="number" data-conc="30" data-multiply="1" data-value="30" value="30"></div>
+</td>
+<td class="dosage table-secondary"></td>
+<td class="vol table-info" id="main1Dog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="8"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="iv15" id="iv15">
+<label class="custom-control-label" for="iv15">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">IV Fluids 1.5x</span><div class="subtitle">1.5x maint</div></td>
+<td>1.5x Maintenance </td>
+<td><span>(30cc x kg) + 70cc IV x 1.5</span></td>
+<td><input class="form-control form-control-sm fluid" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#main15Dog" name="main15Dog" type="number" data-conc="30" data-multiply="1.5" data-value="30" value="30"></td>
+<td class="dosage table-secondary"></td>
+<td class="vol table-info" id="main15Dog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="9"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="iv2" id="iv2">
+<label class="custom-control-label" for="iv2">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">IV Fluids 2x</span><div class="subtitle">2x maint</div></td>
+<td>2x Maintenance </td>
+<td><span>(30cc x kg) + 70cc IV x 2</span></td>
+<td><input class="form-control form-control-sm fluid" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#main2Dog" name="main2Dog" type="number" data-conc="30" data-multiply="2" data-value="30" value="30"></td>
+<td class="dosage table-secondary"></td>
+<td class="vol table-info" id="main2Dog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="10"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="ivshock" id="ivshock">
+<label class="custom-control-label" for="ivshock">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">IV Fluids Shock</span><div class="subtitle">Shock</div></td>
+<td>Shock </td>
+<td><span>90mL/kg IV</span></td>
+<td><input class="form-control form-control-sm shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#mainShockDog" name="mainShockDog" type="number" data-conc="90" data-multiply="1" data-value="90" value="90"></td>
+<td class="dosage table-secondary"></td>
+<td class="vol table-info" id="mainShockDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="11"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Hetastarch" id="Hetastarch">
+<label class="custom-control-label" for="Hetastarch">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Hetastarch</td>
+<td>colloid</td>
+<td><span>1mL/kg/hr; </span><span class="subtitle"><b>max</b> 20mL/kg/24hrs</span></span></td>
+<td><input class="form-control form-control-sm shock" data-appendDose=" mg" data-appendVol=" mls/hr" data-mg="" data-ml="#hetastarchDog" name="hetastarchDog" type="number" data-conc="1" data-multiply="1" data-value="1" value="1"></td>
+<td class="dosage table-secondary"></td>
+<td class="vol table-info" id="hetastarchDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="12"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="VetStarch" id="VetStarch">
+<label class="custom-control-label" for="VetStarch">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">VetStarch 6%
+</span><div class="subtitle">130/0.4 in 0.9% NaCl</div></td>
+<td>colloid</td>
+<td><span>20ml/kg, </span><span class="subtitle">initial 10-20ml slow</span></span></td>
+<td><input class="form-control form-control-sm shock" data-appendDose=" mg" data-appendVol=" mls/day" data-mg="" data-ml="#vetstarchDog" name="vetstarchDog" type="number" data-conc="20" data-multiply="1" data-value="20" value="20"></td>
+<td class="dosage table-secondary"></td>
+<td class="vol table-info" id="vetstarchDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="13"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Hypertonic" id="Hypertonic">
+<label class="custom-control-label" for="Hypertonic">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Hypertonic Saline
+</span><div class="subtitle">7.2%</div></td>
+<td>hypovolemic shock</td>
+<td><span>4 mls/kg single bolus</span></td>
+<td><input class="form-control form-control-sm shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#naclDog" name="naclDog" type="number" data-conc="4" data-multiply="1" data-value="4" value="4"></td>
+<td class="dosage table-secondary"></td>
+<td class="vol table-info" id="naclDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="14"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Dexamethasone" id="Dexamethasone">
+<label class="custom-control-label" for="Dexamethasone">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Dexamethasone
+</span><div class="subtitle">4 mg/ml</div></td>
+<td>shock</td>
+<td><span>0.5-3 mg/kg IV</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" data-mg="#dexDogmg" data-ml="#dexDog" name="dexDog" type="number" data-conc="4" data-min="0.5" data-max="4.4" data-step="0.1" data-postfix="mg/kg" data-decimal="2" value="1" data-value="1"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="vol table-primary" id="dexDogmg"></td>
+<td class="vol table-success" id="dexDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="15"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Diazepam" id="Diazepam">
+<label class="custom-control-label" for="Diazepam">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Diazepam
+</span><div class="subtitle">5 mg/ml</div></td>
+<td>seizure</td>
+<td><span>0.25mg/kg IV</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" name="valDog" type="number" data-mg="#valDogmg" data-ml="#valDog" data-conc="5" value="0.25" data-value="0.25" data-min="0.1" data-max="2" data-step="0.25" data-postfix="mg/kg" data-decimal="2"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-primary" id="valDogmg"></td>
+<td class="vol table-success" id="valDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="16"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Dobutamine" id="Dobutamine">
+<label class="custom-control-label" for="Dobutamine">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Dobutamine CRI
+</span><label class="subtitle">Fluid Size</label>
+<select id="fluidVol1" class="pickDose">
+<option value="1000">1000ml</option>
+<option value="500">500ml</option>
+<option value="250">250ml</option>
+</select><div class="subtitle">12.5 mg/ml</div></td>
+<td>inotrope</td>
+<td><span>0.06-0.60mg/kg/hr</span>
+<span class="subtitle">@ 1 ml/kg/hr</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg/hr" data-appendVol=" ml" name="dobutamineDog" type="number" data-mg="#dobutamineDogmg" data-ml="#dobutamineDogml" data-conc="12.5" value="0.12" data-value="0.12" data-min="0.05" data-max="0.6" data-step="0.01" data-postfix="mg/kg/hr" data-decimal="2">
+</div></div></td>
+<td class="item-input table-warning"><span class="dobutaminefluids"></span></td>
+<td class="dosage table-warning"><span id="dobutamineDogVol"></span><br>
+</td>
+</tr>
+<tr class="table-row eachdrug" data-id="17">
+<td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Dopamine" id="Dopamine">
+<label class="custom-control-label" for="Dopamine">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="drugname"><span class="text-uppercase font-weight-bold">Dopamine CRI
+</span><label class="subtitle">Fluid Size</label>
+<select id="fluidVol" class="pickDose">
+<option value="1000">1000ml</option>
+<option value="500">500ml</option>
+<option value="250">250ml</option>
+</select><div class="subtitle">40 mg/ml</div></td>
+<td>severe hypotension</td>
+<td><span>0.12-0.60mg/kg/hr</span><span class="subtitle">@ 1 ml/kg/hr</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg/hr" data-appendVol=" ml" name="dopamineDog" type="number" data-mg="#dopamineDogmg" data-ml="#dopamineDogml" data-conc="40" value="0.42" data-value="0.42" data-min="0.1" data-max="0.60" data-step="0.01" data-postfix="mg/kg/hr" data-decimal="2">
+</div></div></td>
+<td class="item-input table-warning"><span class="dopaminefluids"></span></td>
+<td class="dosage table-warning"><span id="dopamineDogVol"></span>
+</td>
+</tr>
+<tr class="table-row eachdrug" data-id="18"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Doxapram" id="Doxapram">
+<label class="custom-control-label" for="Doxapram">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Doxapram
+</span><div class="subtitle">20 mg/ml</div></td>
+<td>respiratory stimulant</td>
+<td><span>5-10mg/kg IV</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" name="doxpramDog" type="number" data-mg="#doxpramDogmg" data-ml="#doxpramDog" data-conc="20" value="5" data-value="5" data-min="1" data-max="10" data-step="0.5" data-postfix="mg/kg" data-decimal="2"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-primary" id="doxpramDogmg"></td>
+<td class="vol table-success" id="doxpramDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="19"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Lidocaine" id="Lidocaine">
+<label class="custom-control-label" for="Lidocaine">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Lidocaine HCL
+</span><div class="subtitle">20 mg/ml</div></td>
+<td>antiarrhythmic</td>
+<td><span>1mg/kg bolus slow IV</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" name="lidocaine2" type="number" data-mg="#lidoDogmg" data-ml="#lidoDog" data-conc="20" data-min="0.5" data-max="5" value="1" data-value="1" data-step="0.5" data-postfix="mg/kg" data-decimal="2" value="1"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-primary" id="lidoDogmg"></td>
+<td class="vol table-success" id="lidoDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="20"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Amiodarone" id="Amiodarone">
+<label class="custom-control-label" for="Amiodarone">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Amiodarone
+</span><div class="subtitle">50 mg/ml</div></td>
+<td>antiarrhythmic</td>
+<td><span>5mg/kg IV</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" name="amiodoroneDog" type="number" data-mg="#amiodoroneDogMG" data-ml="#amiodoroneDog" data-conc="50" value="5" data-value="5" data-min="1" data-max="10" data-step="1" data-postfix="mg/kg" data-decimal="2"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-primary" id="amiodoroneDogMG"></td>
+<td class="vol table-success" id="amiodoroneDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="21"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Mannitol" id="Mannitol">
+<label class="custom-control-label" for="Mannitol">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Mannitol
+</span><div class="subtitle">20% (200mg/ml)</div></td>
+<td>cerebral edema</td>
+<td><span>0.5-1.5g/kg IV </span><span class="subtitle">over 10-20min</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" grams" data-appendVol=" ml" name="mannDog" type="number" data-mg="#mannDogMg" data-ml="#mannDog" data-conc="0.2" value="0.5" data-value="0.5" data-min="0.1" data-max="1.5" data-step="0.1" data-postfix="grams/kg" data-decimal="2">
+</div></div></td>
+<td class="dosage table-primary" id="mannDogMg"></td>
+<td class="vol table-success" id="mannDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="22"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Naloxone" id="Naloxone">
+<label class="custom-control-label" for="Naloxone">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Naloxone HCL
+</span><div class="subtitle">0.4 mg/ml</div></td>
+<td>opioid reversal</td>
+<td><span>0.01-0.04 mg/kg IV,IM</span></td>
+<td><div><div class="col-md-12">
+ <input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" name="naloxDog" type="number" data-mg="#naloxDogmg" data-ml="#naloxDog" data-conc="0.4" value="0.01" data-value="0.01" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="3"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-primary" id="naloxDogmg"></td>
+<td class="vol table-success" id="naloxDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="23"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Flumazenil" id="Flumazenil">
+<label class="custom-control-label" for="Flumazenil">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Flumazenil
+</span><div class="subtitle">0.1 mg/ml</div></td>
+<td>Benzodiazepine Antagonist</td>
+<td><span>0.01-0.04 mg/kg IV,IM </span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" name="Flumazenildog" type="number" data-mg="#Flumazenilmg" data-ml="#Flumazenilml" data-conc="0.1" value="0.01" data-value="0.01" data-min="0.01" data-max="0.04" data-step="0.01" data-postfix="mg/kg" data-decimal="2"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-primary" id="Flumazenilmg"></td>
+<td class="vol table-success" id="Flumazenilml"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="24"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="Bicarb" id="Bicarb">
+<label class="custom-control-label" for="Bicarb">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Sodium Bicarb
+</span><div class="subtitle">8.2%, 1 mEq/ml</div></td>
+<td>metabolic acidosis</td>
+<td><span>1 mEq/kg IV,</span><span class="subtitle">then 0.5mEq/kg Q15min</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mEq" data-appendVol=" ml" name="bicarbDog" type="number" data-mg="#bicarbDogMg" data-ml="#bicarbDog" data-conc="1" value="1" data-value="1" data-min="0.5" data-max="1.5" data-step="0.1" data-postfix="mEq/kg" data-decimal="2"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-primary" id="bicarbDogMg"></td>
+<td class="vol table-success" id="bicarbDog"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="25"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="lasix" id="lasix">
+<label class="custom-control-label" for="lasix">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Furosemide
+</span><div class="subtitle">50 mg/ml</div></td>
+<td>Diuretic</td>
+<td><span>2-8 mg/kg IV or IM</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" mg" data-appendVol=" ml" name="lasix" type="number" data-mg=".lasixMg" data-ml=".lasixMl" data-conc="50" value="2" data-value="2" data-min="1" data-max="10" data-step="0.5" data-postfix="mg/kg" data-decimal="2"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-primary lasixMg"></td>
+<td class="vol table-success lasixMl"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="26"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="edefib" id="edefib">
+<label class="custom-control-label" for="edefib">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Defibrillator
+</span><div class="subtitle"></div></td>
+<td>External Defibrillator</td>
+<td><span>2-10 Joules/kg</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" Joules" data-appendVol=" Joules" name="extDefib" type="number" data-mg="" data-ml=".extDefib" data-conc="1" value="2" data-value="2" data-min="2" data-max="10" data-step="0.5" data-postfix="J" data-decimal="2"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-secondary"></td>
+<td class="vol table-warning extDefib"></td>
+</tr>
+<tr class="table-row eachdrug" data-id="27"><td class="printcolumn hidden-print">
+<div class="custom-control custom-checkbox mb-3">
+<input class="custom-control-input printitE" type="checkbox" checked name="idefib" id="idefib">
+<label class="custom-control-label" for="idefib">
+</label><span class="sort-handle color-gray"><i class="far fa-bars fa-fw fa-2x hidden-print"></i></span>
+</div></td>
+<td class="text-uppercase drugname" data-tablesaw-no-labels><span class="font-weight-bold">Defibrillator
+</span><div class="subtitle"></div></td>
+<td>Internal Defibrillator</td>
+<td><span>0.2-1.0 Joules/kg</span></td>
+<td><div><div class="col-md-12">
+<input class="form-control form-control-sm drug phoenix-input" data-appendDose=" Joules" data-appendVol=" Joules" name="intDefib" type="number" data-mg="" data-ml=".intDefib" data-conc="1" value="0.2" data-value="0.2" data-min="0.2" data-max="1.0" data-step="0.1" data-postfix=" J" data-decimal="2"><span class="error-message hidden-print"><i class="fas fa-exclamation-triangle fa-sm fa-fw hidden-print" data-fa-transform="up-2"></i> Above Range</span>
+</div></div></td>
+<td class="dosage table-secondary"></td>
+<td class="vol table-warning intDefib"></td>
+</tr>
+</tbody>
+</table>
+<div class="row">
+<div class="col-sm-12">
+<strong>Intratracheal Doses</strong> <a tabindex="0" class="text-danger hidden-print" role="button" data-toggle="popover" data-trigger="focus" title="Intratracheal Administration" data-content="When administering drugs via the intratracheal route, dilution with normal saline and use of a long catheter, such as a red-rubber catheter placed through the endotracheal tube to the level of the carina, are recommended.<br>Use the mnemonic <strong>NAVEL</strong> to remember which drugs can be administered intratracheally:<br><strong>N</strong>aloxone <strong>A</strong>tropine <strong>V</strong>asopressin <strong>E</strong>pinephrine <strong>L</strong>idocaine"><i class="fa fa-info-circle fa-lg"></i></a>
+<table class="table-sm table table-bordered table-striped tablesaw-row-border">
+<thead>
+<tr>
+<th>Naloxone</span><div class="subtitle"> 0.4mg/ml</div></th>
+<th>Atropine</span><div class="subtitle"> 0.54mg/ml</div></th>
+<th>Vassopressin</span><div class="subtitle"> 20U/ml</div></th>
+<th>Epinephrine</span><div class="subtitle"> 1mg/ml</div></th>
+<th>Lidocaine </span><div class="subtitle"> 20mg/ml</div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="rx1 table-danger" id="naloxoneT"></td>
+<td class="rx1 table-danger" id="atroT"></td>
+<td class="rx1 table-danger" id="vasoT"></td>
+<td class="rx1 table-danger" id="epiT"></td>
+<td class="rx1 table-danger" id="lidoT"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr class="hidden-print">
+<footer class="footer hidden-print"><div class="col-md-12 text-center"><div class="addthis_sharing_toolbox hidden-print"></div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="e5e784237edaf5129f446e02-text/javascript"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4168315944025657" data-ad-slot="8290085546" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script type="e5e784237edaf5129f446e02-text/javascript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="container text-center">
+<span class="text-center"><small class="text-center"> &copy; 2018 Vetcalculators LLC</small> <button class="btn btn-link btn-sm" data-toggle="modal" data-target="#disclaimer">Legal</button>
+</span> </div>
+</footer>
+
+<div class="modal fade" id="disclaimer" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="ModalLabel">Legal Notices and Disclaimer</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<div class="modal-body">
+<p>All information contained in and produced by Vetcalculators.com is provided for educational purposes only. This information should not be used for the diagnosis or treatment of any health problem or disease. THIS INFORMATION IS NOT INTENDED TO REPLACE CLINICAL JUDGMENT OR GUIDE INDIVIDUAL PATIENT CARE in any manner.
+The User is hereby notified that the information contained herein may not meet the user"s needs. The User is advised that, although the information is derived from medical research and literature we cannot guarantee its correctness, comprehensiveness or currency. The User of this software assumes sole responsibility for any decisions made or actions taken based on the information contained in Vetcalculators.com calculators.
+Neither Vetcalculators LLC, the system"s authors nor any other party involved in the preparation, publication or distribution of Vetcalculators.com shall be liable for any special, consequential, or exemplary damages resulting in whole or part from any User"s use of or reliance upon this system and the information contained within.
+Vetcalculators LLC disclaims all warranties regarding such information whether express or implied, including any warranty as to the quality, accuracy, currency or suitability of this information for any particular purpose.
+Vetcalculators LLC and the system"s authors, developers and distributors assume no responsibility for any erroneous results due to defects in the system. ACCESS TO AND USE OF THE VETCALCULATORS LLC CALCULATORS IS PROVIDED WITHOUT WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR ANY OTHER WARRANTY, EXPRESS OR IMPLIED. In no event shall Vetcalculators LLC be liable for special, direct, indirect or consequential damages, charges, claims, costs, demands, losses fees or expenses of any nature or kind arising from use of the Vetcalculators LLC calculators.
+By using Vetcalculators.com, documentation and/or any software found therein, the User agrees to abide by United States and International copyright laws and all other applicable laws involving copyright. </p>
+<p>Vetcalculators.com © 2018 Vetcalculators LLC</p>
+</div>
+</div>
+</div>
+</div>
+
+    <div id="menu-updates"
+         class="menu-box menu-box-detached round-medium"
+         data-menu-type="menu-box-top"
+         data-menu-height="390"
+         data-menu-load="menu-updates.html"
+         data-menu-effect="menu-over">
+    </div> 
+
+<div class="modal fade" id="domitorCanine">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">Dexdomitor Dose Chart - Canine</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+	
+</div>
+</div>
+
+<div class="modal-footer">
+<button type="button" class="btn btn-warning" data-dismiss="modal">No Thanks</button>
+
+</div>
+</div>
+
+<div class="modal fade recover" id="recover">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">Recover Flow Chart</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+</div>
+</div>
+</div>
+<div id="whatsnew2" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" data-backdrop="static">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">New! Edit Emergency Drugs</h5>
+<button type="button" class="close whatsnew" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+Show only the drugs you use! Click <span class="badge badge-light">Edit Drugs <i class="fas fa-tasks"></i></span>, then use <i class="fas fa-check-square" style="color:#007bff"></i> to select only the drugs to show and print. Re-sort drugs using <i class="far fa-bars hidden-print"></i>. Your selections and sort order will be saved in this browser.
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary whatsnew" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<div id="appNow" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Android" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header blue-grey ">
+<h5 class="modal-title"><img src="../tests/kolor/emergency-calculator/img/logo.svg" alt="logo" /> Get the Vetcalculators Android App</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+
+<p></p>
+</div>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="e5e784237edaf5129f446e02-application/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-529e74c07ff2a4a5"></script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="e5e784237edaf5129f446e02-text/javascript">window.jQuery || document.write("<script type="application/javascript" src="js/jquery-3.2.1.min.js"><\/script>")</script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="js/jquery.fn.sortable.min.js" async></script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="js/bootstrap.bundle.min.js" async></script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="js/shards.min.js" async></script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="js/tablesaw.jquery.js" async></script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="js/bootstrap-select.min.js" async></script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="js/jquery.phoenix.min.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js" type="e5e784237edaf5129f446e02-text/javascript"></script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="js/tablesaw.jquery.js" async></script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="js/base.js" async></script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="js/app2.js" async></script>
+<script type="e5e784237edaf5129f446e02-application/javascript" src="js/emergency.js" async></script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="e5e784237edaf5129f446e02-|49" defer=""></script>
+
+
+	</body>
+</html>

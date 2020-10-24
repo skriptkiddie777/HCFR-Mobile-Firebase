@@ -1,0 +1,142 @@
+<script>
+function signOut(){
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        swal({
+            type: 'successfull',
+            title: 'Signed Out', 
+        }).then((value) => {
+            setTimeout(function(){
+                window.location.replace("../login.html");
+            }, 1000)
+        });
+    }).catch(function(error) {
+        // An error happened.
+        let errorMessage = error.message;
+        swal({
+            type: 'error',
+            title: 'Error',
+            text: "Error",
+        })
+    });
+}
+</script>
+<div class="menu-content">
+    <div class="menu-header">
+        <a class="menu-logo" href="home.html"></a>
+        <h1>Welcome</h1>
+        <p>Never be without info again!</p>
+    </div>
+    <div class="menu-list icon-background-active">
+        <em class="menu-divider top-10">Navigation</em>
+
+        <a id="nav-welcome" class="menu-item" href="home.html">
+            <i class="fad fa-fire-smoke animated faa-wrench bg-red"></i>
+            HCFR Home Page
+        </a>
+        <a id="nav-homepages" class="menu-item" href="medical-home.html">
+            <i class="fad bg-navy fa-ambulance animated faa-ring"></i>
+            Medical SOP
+            <i class="fa fa-angle-right"></i>
+        </a>
+        <a id="nav-components" class="menu-item" href="fire-sop.html">
+            <i class="fad bg-purple fa-fire animated faa-tada"></i>
+            HCFR SOP
+            <span>HOT</span>
+        </a>
+        <a id="nav-media" class="menu-item" href="stations.html">
+            <i class="fad fa-map animated faa-wrench bg-olive"></i>
+            Station List
+            <span>MAPS</span>
+        </a>
+        <a id="medical-directors" class="menu-item" href="medical-directors.html">
+            <i class="fad bg-gradient-mint fa-user-md animated faa-ring"></i>
+            Call Medic-1
+        </a>
+        <a id="nav-apps" class="menu-item" href="useful-apps.html">
+            <i class="fab bg-purple fa-google-play animated faa-float"></i>
+            Useful Apps
+        </a>
+        <a id="nav-hospitals" class="menu-item" href="hospitals.html">
+            <i class="fad bg-lime fa-hospital animated faa-float"></i>
+            Hospitals
+            <span>OOUCH</span>
+        </a>
+        <a id="nav-hcfr-1" class="menu-item" href="hcfr-pics.html">
+            <i class="fad bg-olive fa-images animated faa-vertical"></i>
+            HCFR Photos
+            <span>Gallery</span>
+        </a>
+        <div id="submenu-3" class="submenu">
+			<a href="https://my.vmware.com/web/vmware/info?slug=desktop_end_user_computing/vmware_horizon_clients/4_0">VMWare Horizon</a>
+			<a href="https://hillsboroughcounty-wfts.kronos.net/login">Telestaff</a>
+		</div>
+        <a id="nav-union" class="menu-item" href="https://hcfflocal2294.org/">
+            <i class="fad bg-lime fa-dumpster-fire animated faa-float"></i>
+            Union Site
+            <span>2294</span>
+        </a>
+        <a id="logout" class="menu-item" onclick="signOut()">
+            <i class="fad bg-purple fa-fire animated faa-tada"></i>
+            Log Out
+            <span>Bye</span>
+        </a>
+		<a class="menu-item close-menu" href="#">
+            <i class="fa bg-gradient-red2 fa-times"></i>
+            Close Menu
+            <i class="fa fa-angle-right"></i>
+        </a>
+		
+        <em class="menu-divider">Important Contacts</em>
+        <a class="menu-item" href="tel:+1 800 222 1222">
+            <i class="fad bg-olive animated faa-wrench fa-skull-crossbones"></i>
+            Poison Control
+            <i class="fa fa-angle-right"></i>
+        </a>
+        <a class="menu-item" href="tel:+1 800 262 8200">
+            <i class="fad bg-aqua fa-radiation animated faa-ring"></i>
+            CHEMTREC
+            <i class="fa fa-angle-right"></i>
+        </a>
+        <a class="menu-item" href="tel:+1 813 268 3888">
+            <i class="fad bg-purple fa-biohazard animated faa-tada"></i>
+            Infection Control
+            <i class="fa fa-angle-right"></i>
+        </a>
+        <a class="menu-item" href="tel:+1 800 962 2873">
+            <i class="fad bg-green fa-phone-volume animated faa-float"></i>
+            Abuse Hotline
+            <i class="fa fa-angle-right"></i>
+        </a>
+        <a class="menu-item" href="tel:+1 844 525 3473">
+            <i class="fad bg-blue fa-phone-square-alt animated faa-vertical"></i>
+            Firestrong
+            <i class="fa fa-angle-right"></i>
+        </a>
+
+
+        <em class="menu-divider">Get in Touch</em>
+        <a class="menu-item" href="tel:+1 813 272 6600">
+            <i class="fad bg-gradient-green1 fa-phone animated faa-ring"></i>
+            Call HQ
+            <i class="fa fa-angle-right"></i>
+        </a>
+        <a class="menu-item" href="https://webmail.hillsboroughcounty.org/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fwebmail.hillsboroughcounty.org%2fowa%2f">
+            <i class="fad bg-gradient-green1 fa-envelope-open-text animated faa-float"></i>
+            Access Webmail
+            <i class="fa fa-angle-right"></i>
+        </a>
+        <a class="menu-item" href="sms:+1 813 272 5665">
+            <i class="fad bg-gradient-mint fa-phone-alt animated faa-wrench"></i>
+            Call Dispatch
+            <i class="fa fa-angle-ring"></i>
+        </a>
+		<a class="menu-item" href="mailto:RaistrickL@HCFLGov.net <RaistrickL@HCFLGov.net>;">
+            <i class="fad bg-gradient-blue2 fa-envelope"></i>
+            Mail HQ
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
+    <em class="menu-copyright">Copyright , Enabled. All Rights Reserved, <a href="tos.html">Terms Of Service</a><a href="privacy-policy.html">Privacy Policy</a></em>
+	
+</div>
